@@ -3,40 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lux Clean | Limpeza Profissional</title>
+<title>Lux Clean</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #050505;
   color: white;
+  background: black;
+}
+
+/* FUNDO LUXO */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+    url("https://i.imgur.com/8zQZ4zF.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
 }
 
 .container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
+  max-width: 1000px;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(black, #0a0a0a);
-}
-
-.hero h1 {
-  font-size: 48px;
-  color: gold;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 20px;
+/* LOGO */
+.logo {
+  width: 140px;
   margin-bottom: 20px;
 }
 
+/* TEXTOS */
+h1 {
+  font-size: 50px;
+  color: gold;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #fff3b0;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* BOTÃO */
 .btn {
+  display: inline-block;
+  margin-top: 25px;
   background: linear-gradient(gold, #b8860b);
   color: black;
   padding: 15px 30px;
@@ -45,8 +63,10 @@ body {
   font-weight: bold;
 }
 
+/* SEÇÕES */
 .section {
   padding: 60px 20px;
+  background: #0a0a0a;
 }
 
 .section h2 {
@@ -60,11 +80,7 @@ body {
   gap: 20px;
 }
 
-.services {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.prices {
+.cards {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
@@ -75,83 +91,95 @@ body {
   text-align: center;
 }
 
+/* PREÇOS */
 .price {
-  font-size: 28px;
+  font-size: 22px;
   color: gold;
+  font-weight: bold;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
-  padding: 40px 20px;
-  background: #000;
+  padding: 40px;
+  background: black;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-<h1>Lux Clean</h1>
-<p>Limpeza profissional com qualidade, confiança e excelência.</p>
+  <div class="container">
 
-<a href="https://wa.me/351924133226" class="btn">
-Solicitar Orçamento
-</a>
+    <!-- LOGO -->
+    <img src="logo.png" class="logo">
+
+    <h1>Lux Clean</h1>
+    <h2>Limpeza profissional de alto padrão</h2>
+
+    <p>
+      Qualidade, confiança e atenção aos detalhes para deixar seu ambiente impecável.
+    </p>
+
+    <a href="https://wa.me/351924133226" class="btn">
+      Fazer orçamento
+    </a>
+
+  </div>
 </div>
 
+<!-- SERVIÇOS -->
 <div class="section">
-<div class="container">
-<h2>Serviços</h2>
+  <h2>Serviços</h2>
 
-<div class="grid services">
-<div class="card">Casas e apartamentos</div>
-<div class="card">Pós-obra</div>
-<div class="card">Escritórios</div>
-<div class="card">Limpeza profunda</div>
-<div class="card">Organização de ambientes</div>
-<div class="card">Passamos roupa</div>
+  <div class="grid cards">
+    <div class="card">Casas e apartamentos</div>
+    <div class="card">Pós-obra</div>
+    <div class="card">Escritórios</div>
+    <div class="card">Limpeza profunda</div>
+    <div class="card">Organização de ambientes</div>
+    <div class="card">Passamos roupa</div>
+  </div>
 </div>
 
-</div>
-</div>
-
+<!-- PREÇOS -->
 <div class="section">
-<div class="container">
-<h2>Preços</h2>
+  <h2>Preços</h2>
 
-<div class="grid prices">
-<div class="card">
-<p class="price">10€/hora</p>
-<p>Mínimo de 4 horas</p>
-</div>
+  <div class="grid cards">
+    <div class="card">
+      <p class="price">10€/hora</p>
+      <p>Mínimo de 4 horas</p>
+    </div>
 
-<div class="card">
-<p>T1 (1 quarto)</p>
-<p class="price">70€</p>
-</div>
+    <div class="card">
+      <p>T1</p>
+      <p class="price">a partir de 70€</p>
+    </div>
 
-<div class="card">
-<p>T2 (2 quartos)</p>
-<p class="price">90€</p>
-</div>
+    <div class="card">
+      <p>T2</p>
+      <p class="price">a partir de 90€</p>
+    </div>
 
-<div class="card">
-<p>T3 (3 quartos)</p>
-<p class="price">90€</p>
-</div>
+    <div class="card">
+      <p>T3</p>
+      <p class="price">a partir de 90€</p>
+    </div>
 
-<div class="card">
-<p>Pós-obra</p>
-<p class="price">120€</p>
-</div>
-</div>
-
-</div>
+    <div class="card">
+      <p>Pós-obra</p>
+      <p class="price">a partir de 120€</p>
+    </div>
+  </div>
 </div>
 
+<!-- CONTATO -->
 <div class="footer">
-<p>📞 924 133 226</p>
-<p>Atendemos na sua região</p>
+  <p>📞 924 133 226</p>
+  <p>Atendemos na sua região</p>
 </div>
 
 </body>
