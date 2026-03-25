@@ -1,388 +1,382 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lux Clean</title>
+  <meta name="description" content="Lux Clean - Limpeza profissional com excelência, confiança e qualidade." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<title>Lux Clean | Limpeza Profissional</title>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.88)),
+        url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(212,175,55,0.20);
+    }
 
-body{
-background:#050505;
-color:white;
-}
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-background:black;
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
-}
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
 
-header h1{
-color:#d4af37;
-font-size:28px;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
 
-nav a{
-color:white;
-margin-left:25px;
-text-decoration:none;
-font-size:16px;
-}
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-nav a:hover{
-color:#d4af37;
-}
+    nav ul li a:hover {
+      color: #d4af37;
+    }
 
-.hero{
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 20px 80px;
+    }
 
-height:100vh;
+    .hero-content {
+      max-width: 900px;
+    }
 
-background:
-linear-gradient(rgba(0,0,0,0.6),
-rgba(0,0,0,0.9)),
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
 
-url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=80');
+    .hero p {
+      font-size: 20px;
+      color: #e6e6e6;
+      margin-bottom: 35px;
+    }
 
-background-size:cover;
-background-position:center;
+    .btn-principal {
+      display: inline-block;
+      background: #d4af37;
+      color: #000000;
+      text-decoration: none;
+      padding: 16px 34px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+    .btn-principal:hover {
+      background: #f1d57a;
+      transform: translateY(-2px);
+    }
 
-text-align:center;
-padding:20px;
-}
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 20px;
+    }
 
-.hero h2{
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      color: #d4af37;
+      margin-bottom: 18px;
+    }
 
-font-size:52px;
-margin-bottom:20px;
-}
+    .section-subtitle {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      color: #dddddd;
+      font-size: 18px;
+    }
 
-.hero p{
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
 
-font-size:22px;
-max-width:700px;
-margin-bottom:35px;
-}
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,175,55,0.18);
+      border-radius: 14px;
+      padding: 28px 22px;
+      transition: 0.3s;
+    }
 
-.btn{
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,0.45);
+      background: rgba(255,255,255,0.07);
+    }
 
-background:#d4af37;
-padding:15px 35px;
-font-size:18px;
-border-radius:5px;
-text-decoration:none;
-color:black;
-font-weight:bold;
-transition:0.3s;
-}
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
 
-.btn:hover{
-
-background:white;
-}
-
-section{
-
-padding:100px 40px;
-max-width:1200px;
-margin:auto;
-}
-
-</style>
+    .card p {
+      color: #eaeaea;
+      font-size: 16px;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Lux Clean</div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Limpeza profissional com excelência e confiança</h1>
+      <p>
+        A Lux Clean oferece serviços de limpeza residencial, empresarial e pós-obra
+        com atendimento profissional em Lisboa, Cascais e Margem Sul.
+      </p>
+      <a class="btn-principal" href="https://wa.me/351924133226" target="_blank">
+        Faça já seu orçamento
+      </a>
+    </div>
+  </section><section class="section" id="servicos">
+
+    <h2 class="section-title">Nossos Serviços</h2>
+
+    <p class="section-subtitle">
+
+      Trabalhamos com limpeza profissional adaptada às necessidades de cada cliente,
+      garantindo qualidade, confiança e atenção aos detalhes.
+
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Limpeza Residencial</h3>
+        <p>
+          Limpeza completa de casas e apartamentos com organização,
+          higiene profunda e acabamento profissional.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Limpeza Pós-Obra</h3>
+        <p>
+          Remoção de poeiras pesadas e resíduos após obras,
+          deixando o espaço pronto para uso imediato.
+        </p>
+      </div>
 
-<h1>Lux Clean</h1>
+      <div class="card">
+        <h3>Limpeza de Escritórios</h3>
+        <p>
+          Ambientes corporativos limpos e organizados para maior
+          conforto e produtividade da equipa.
+        </p>
+      </div>
 
-<nav>
+      <div class="card">
+        <h3>Limpeza Profunda</h3>
+        <p>
+          Serviço ideal para mudanças, higienização completa
+          e manutenção detalhada do imóvel.
+        </p>
+      </div>
 
-<a href="#">Início</a>
+    </div>
 
-<a href="#servicos">Serviços</a>
+  </section>
 
-<a href="#sobre">Sobre</a>
 
-<a href="#contato">Contato</a>
 
-</nav>
+  <section class="section">
 
-</header>
+    <h2 class="section-title">Por que escolher a Lux Clean</h2>
 
+    <p class="section-subtitle">
 
-<section class="hero">
+      Trabalhamos com compromisso, qualidade e confiança para entregar
+      resultados profissionais em cada serviço realizado.
 
-<h2>Limpeza profissional com excelência</h2>
+    </p>
 
-<p>
+    <div class="cards">
 
-Serviços de limpeza residencial, pós-obra e empresarial com qualidade,
-confiança e atendimento rápido em Lisboa, Cascais e Margem Sul.
+      <div class="card">
+        <h3>Atendimento rápido</h3>
+        <p>
+          Resposta rápida no WhatsApp e agendamento flexível conforme
+          sua necessidade.
+        </p>
+      </div>
 
-</p>
+      <div class="card">
+        <h3>Equipa profissional</h3>
+        <p>
+          Profissionais responsáveis e preparados para garantir
+          um serviço de excelência.
+        </p>
+      </div>
 
-<a class="btn"
+      <div class="card">
+        <h3>Produtos de qualidade</h3>
+        <p>
+          Utilizamos produtos adequados para cada tipo de ambiente
+          e superfície.
+        </p>
+      </div>
 
-href="https://wa.me/351924133226">
+      <div class="card">
+        <h3>Confiança e segurança</h3>
+        <p>
+          Trabalhamos com respeito, organização e compromisso
+          com cada cliente.
+        </p>
+      </div>
 
-Faça já seu orçamento
+    </div>
 
-</a>
-</section>
-<section id="servicos">
+  </section><section class="section" id="sobre">
 
-<h2 style="text-align:center;
-margin-bottom:60px;
-font-size:40px;
-color:#d4af37;">
+    <h2 class="section-title">Sobre a Lux Clean</h2>
 
-Nossos Serviços
+    <p class="section-subtitle">
 
-</h2>
+      A Lux Clean oferece serviços de limpeza profissional com foco em qualidade,
+      confiança e excelência. Trabalhamos com dedicação para entregar ambientes
+      limpos, organizados e preparados para o conforto dos nossos clientes.
 
+      Atendemos Lisboa, Cascais e Margem Sul com rapidez, profissionalismo
+      e atenção aos detalhes.
 
-<div style="display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;">
+    </p>
 
+  </section>
 
-<div>
 
-<h3>Limpeza Residencial</h3>
 
-<p>
+  <section class="section" id="contato">
 
-Limpeza completa de casas e apartamentos com atenção aos detalhes
-e produtos profissionais.
+    <h2 class="section-title">Contato</h2>
 
-</p>
+    <p class="section-subtitle">
 
-</div>
+      Solicite já o seu orçamento rápido pelo WhatsApp.
+      Atendimento profissional e resposta imediata.
 
+    </p>
 
-<div>
+    <div style="text-align:center;">
 
-<h3>Limpeza Pós-Obra</h3>
+      <a class="btn-principal"
+         href="https://wa.me/351924133226"
+         target="_blank">
 
-<p>
+         Fale connosco no WhatsApp
 
-Remoção de poeiras pesadas, resíduos e preparação do ambiente
-para uso imediato.
+      </a>
 
-</p>
+    </div>
 
-</div>
+  </section>
 
 
-<div>
 
-<h3>Limpeza de Escritórios</h3>
+  <footer style="
+    text-align:center;
+    padding:30px 20px;
+    background:black;
+    border-top:1px solid rgba(212,175,55,0.25);
+  ">
 
-<p>
+    <p style="color:#cccccc;">
+      © 2026 Lux Clean — Limpeza profissional
+    </p>
 
-Ambiente limpo e organizado para maior produtividade e conforto
-da sua equipa.
+    <p style="color:#aaaaaa; margin-top:6px;">
+      Lisboa • Cascais • Margem Sul
+    </p>
 
-</p>
+  </footer>
 
-</div>
 
 
-<div>
+  <a href="https://wa.me/351924133226"
+     target="_blank"
+     style="
+     position:fixed;
+     bottom:20px;
+     right:20px;
+     background:#d4af37;
+     color:black;
+     padding:15px 22px;
+     border-radius:50px;
+     font-weight:bold;
+     text-decoration:none;
+     box-shadow:0 6px 18px rgba(0,0,0,0.4);
+     z-index:999;
+     ">
 
-<h3>Limpeza Profunda</h3>
+     WhatsApp
 
-<p>
+  </a>
 
-Ideal para mudanças, renovações ou higienização completa do imóvel.
-
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section style="background:#0b0b0b;">
-
-
-<h2 style="text-align:center;
-margin-bottom:60px;
-font-size:40px;
-color:#d4af37;">
-
-Por que escolher a Lux Clean
-
-</h2>
-
-
-<div style="display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;">
-
-
-<div>
-
-✔ Atendimento rápido
-
-</div>
-
-
-<div>
-
-✔ Equipa profissional
-
-</div>
-
-
-<div>
-
-✔ Produtos de qualidade
-
-</div>
-
-
-<div>
-
-✔ Excelência nos detalhes
-
-</div>
-
-
-<div>
-
-✔ Confiança e segurança
-
-</div>
-
-
-<div>
-
-✔ Lisboa • Cascais • Margem Sul
-
-</div>
-
-
-</div>
-
-
-</section>
-<section id="sobre">
-
-<h2 style="text-align:center;
-margin-bottom:40px;
-font-size:40px;
-color:#d4af37;">
-
-Sobre a Lux Clean
-
-</h2>
-
-<p style="max-width:900px;
-margin:0 auto;
-text-align:center;
-font-size:18px;
-line-height:1.8;">
-
-A Lux Clean oferece serviços de limpeza profissional com foco em
-qualidade, confiança e excelência. Trabalhamos com dedicação para
-entregar ambientes limpos, organizados e prontos para o seu conforto,
-seja em residências, escritórios ou limpezas pós-obra.
-
-</p>
-
-</section>
-
-
-
-<section id="contato">
-
-<h2 style="text-align:center;
-margin-bottom:50px;
-font-size:40px;
-color:#d4af37;">
-
-Contato
-
-</h2>
-
-<div style="max-width:800px;
-margin:0 auto;
-text-align:center;
-font-size:20px;
-line-height:2;">
-
-<p><strong>WhatsApp:</strong> <a href="https://wa.me/351924133226" style="color:#d4af37; text-decoration:none;">+351 924 133 226</a></p>
-
-<p><strong>Atendimento:</strong> Lisboa, Cascais e Margem Sul</p>
-
-<p><strong>Orçamentos rápidos e atendimento profissional</strong></p>
-
-<a class="btn" href="https://wa.me/351924133226" style="display:inline-block; margin-top:20px;">
-Fale connosco no WhatsApp
-</a>
-
-</div>
-
-</section>
-
-
-
-<footer style="background:black;
-text-align:center;
-padding:30px 20px;
-margin-top:40px;
-font-size:15px;
-color:#cccccc;">
-
-<p>© 2026 Lux Clean - Limpeza Profissional</p>
-<p>Lisboa • Cascais • Margem Sul</p>
-
-</footer>
-
-
-
-<a href="https://wa.me/351924133226"
-style="position:fixed;
-bottom:20px;
-right:20px;
-background:#d4af37;
-color:black;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.4);
-z-index:999;">
-
-WhatsApp
-
-</a>
 
 </body>
 </html>
