@@ -1,584 +1,388 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lux Clean</title>
-  <meta
-    name="description"
-    content="Lux Clean - Limpeza profissional com excelência, confiança e qualidade."
-  />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<title>Lux Clean | Limpeza Profissional</title>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.88)),
-        url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #ffffff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+<style>
 
-    .overlay {
-      min-height: 100vh;
-      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.78));
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-    header {
-      width: 100%;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-    }
+body{
+background:#050505;
+color:white;
+}
 
-    .logo img {
-      height: 50px;
-      width: auto;
-    }
+header{
+position:fixed;
+top:0;
+width:100%;
+background:black;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
+header h1{
+color:#d4af37;
+font-size:28px;
+}
 
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.98rem;
-      transition: 0.3s;
-    }
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+font-size:16px;
+}
 
-    nav a:hover {
-      color: #d4af37;
-    }
+nav a:hover{
+color:#d4af37;
+}
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-    }
+.hero{
 
-    .hero-content {
-      max-width: 900px;
-      width: 100%;
-    }
+height:100vh;
 
-    .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 18px;
-      line-height: 1.15;
-    }
+background:
+linear-gradient(rgba(0,0,0,0.6),
+rgba(0,0,0,0.9)),
 
-    .hero h1 span {
-      color: #d4af37;
-    }
+url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=80');
 
-    .hero p {
-      font-size: 1.15rem;
-      color: #f1f1f1;
-      max-width: 760px;
-      margin: 0 auto 30px;
-    }
+background-size:cover;
+background-position:center;
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      border: 2px solid transparent;
-      text-align: center;
-    }
+text-align:center;
+padding:20px;
+}
 
-    .btn-primary {
-      background: #d4af37;
-      color: #111;
-    }
+.hero h2{
 
-    .btn-primary:hover {
-      background: #e8c85c;
-      transform: translateY(-2px);
-    }
+font-size:52px;
+margin-bottom:20px;
+}
 
-    .btn-secondary {
-      border: 2px solid #ffffff;
-      color: #ffffff;
-      background: transparent;
-    }
+.hero p{
 
-    .btn-secondary:hover {
-      background: #ffffff;
-      color: #111;
-      transform: translateY(-2px);
-    }
+font-size:22px;
+max-width:700px;
+margin-bottom:35px;
+}
 
-    section {
-      padding: 90px 8%;
-    }
+.btn{
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+background:#d4af37;
+padding:15px 35px;
+font-size:18px;
+border-radius:5px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+transition:0.3s;
+}
 
-    .section-title h2 {
-      font-size: 2.3rem;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
+.btn:hover{
 
-    .section-title p {
-      color: #dddddd;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+background:white;
+}
 
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+section{
 
-    .about-box,
-    .about-text {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 22px;
-      padding: 30px;
-      backdrop-filter: blur(6px);
-    }
+padding:100px 40px;
+max-width:1200px;
+margin:auto;
+}
 
-    .about-box h3,
-    .about-text h3 {
-      margin-bottom: 16px;
-      color: #d4af37;
-      font-size: 1.4rem;
-    }
-
-    .about-text p,
-    .about-box p {
-      color: #f3f3f3;
-      margin-bottom: 12px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .service-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 22px;
-      padding: 28px;
-      transition: 0.3s;
-      backdrop-filter: blur(6px);
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(212,175,55,0.55);
-    }
-
-    .service-card h3 {
-      color: #d4af37;
-      margin-bottom: 12px;
-      font-size: 1.2rem;
-    }
-
-    .service-card p {
-      color: #f0f0f0;
-      font-size: 0.97rem;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .why-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
-      padding: 24px;
-      text-align: center;
-      backdrop-filter: blur(6px);
-    }
-
-    .why-card h3 {
-      color: #d4af37;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .why-card p {
-      color: #f0f0f0;
-    }
-
-    .cta {
-      text-align: center;
-      background: rgba(212,175,55,0.12);
-      border: 1px solid rgba(212,175,55,0.25);
-      border-radius: 28px;
-      padding: 50px 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .cta h2 {
-      font-size: 2.2rem;
-      margin-bottom: 14px;
-    }
-
-    .cta p {
-      color: #f0f0f0;
-      max-width: 700px;
-      margin: 0 auto 25px;
-    }
-
-    .contact-box {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .contact-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
-      padding: 24px;
-      text-align: center;
-      backdrop-filter: blur(6px);
-    }
-
-    .contact-card h3 {
-      color: #d4af37;
-      margin-bottom: 10px;
-    }
-
-    .contact-card a,
-    .contact-card p {
-      color: #ffffff;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    footer {
-      text-align: center;
-      padding: 28px 20px;
-      color: #dddddd;
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      background: rgba(0,0,0,0.35);
-      margin-top: 50px;
-    }
-
-    @media (max-width: 992px) {
-      .about,
-      .services-grid,
-      .why-grid,
-      .contact-box {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px 5%;
-      }
-
-      nav {
-        width: 100%;
-      }
-
-      .about,
-      .services-grid,
-      .why-grid,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 100px 18px 60px;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      section {
-        padding: 75px 6%;
-      }
-
-      .section-title h2 {
-        font-size: 1.8rem;
-      }
-
-      .cta h2 {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <div class="overlay">
-    <header>
-      <div class="logo">
-        <img src="logo.png" alt="Lux Clean Logo">
-      </div>
-      <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#vantagens">Vantagens</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
 
-    <section class="hero" id="inicio">
-      <div class="hero-content">
-        <h1>Limpeza com <span>excelência</span>, cuidado e confiança</h1>
-        <p>
-          A Lux Clean oferece serviços de limpeza com qualidade, organização e
-          atenção aos detalhes, trazendo mais conforto, praticidade e bem-estar
-          para o seu espaço.
-        </p>
-        <div class="buttons">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/351924133226?text=Olá,%20quero%20fazer%20o%20meu%20orçamento%20na%20Lux%20Clean."
-            target="_blank"
-          >
-            Faça já o seu orçamento
-          </a>
-          <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
-        </div>
-      </div>
-    </section>
+<header>
 
-    <section id="sobre">
-      <div class="section-title">
-        <h2>Sobre a Lux Clean</h2>
-        <p>
-          Profissionalismo, confiança e dedicação para deixar cada ambiente mais
-          limpo, agradável e bem cuidado.
-        </p>
-      </div>
+<h1>Lux Clean</h1>
 
-      <div class="about">
-        <div class="about-text">
-          <h3>Quem somos</h3>
-          <p>
-            A Lux Clean nasceu para oferecer um serviço de limpeza de alto nível,
-            com foco na qualidade, no detalhe e na satisfação de cada cliente.
-          </p>
-          <p>
-            Trabalhamos com responsabilidade, organização e compromisso, sempre
-            buscando entregar um ambiente limpo, renovado e acolhedor.
-          </p>
-        </div>
+<nav>
 
-        <div class="about-box">
-          <h3>Nosso compromisso</h3>
-          <p>✔ Atendimento com atenção e respeito</p>
-          <p>✔ Serviço feito com cuidado e dedicação</p>
-          <p>✔ Mais conforto e praticidade para o cliente</p>
-          <p>✔ Excelência em cada detalhe</p>
-        </div>
-      </div>
-    </section>
+<a href="#">Início</a>
 
-    <section id="servicos">
-      <div class="section-title">
-        <h2>Nossos Serviços</h2>
-        <p>
-          Soluções de limpeza pensadas para diferentes tipos de ambientes e necessidades.
-        </p>
-      </div>
+<a href="#servicos">Serviços</a>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Limpeza Residencial</h3>
-          <p>
-            Serviço completo para casas e apartamentos, com foco em organização,
-            higiene e bem-estar no dia a dia.
-          </p>
-        </div>
+<a href="#sobre">Sobre</a>
 
-        <div class="service-card">
-          <h3>Limpeza Pós-Obra</h3>
-          <p>
-            Remoção de poeira, resíduos e sujeiras deixadas após obras ou
-            remodelações, deixando o ambiente pronto para uso.
-          </p>
-        </div>
+<a href="#contato">Contato</a>
 
-        <div class="service-card">
-          <h3>Limpeza de Escritórios</h3>
-          <p>
-            Ambientes profissionais mais limpos, organizados e agradáveis para
-            aumentar o conforto e a produtividade.
-          </p>
-        </div>
+</nav>
 
-        <div class="service-card">
-          <h3>Limpeza Profunda</h3>
-          <p>
-            Ideal para quem precisa de uma limpeza mais detalhada, com atenção
-            especial a cada canto do ambiente.
-          </p>
-        </div>
+</header>
 
-        <div class="service-card">
-          <h3>Organização de Ambientes</h3>
-          <p>
-            Mais praticidade e harmonia para o seu espaço com organização
-            cuidadosa e eficiente.
-          </p>
-        </div>
 
-        <div class="service-card">
-          <h3>Serviço Personalizado</h3>
-          <p>
-            Cada cliente tem uma necessidade diferente. A Lux Clean adapta o
-            serviço para melhor atender o que você precisa.
-          </p>
-        </div>
-      </div>
-    </section>
+<section class="hero">
 
-    <section id="vantagens">
-      <div class="section-title">
-        <h2>Por que escolher a Lux Clean?</h2>
-        <p>
-          Cuidamos do seu espaço com dedicação, confiança e atenção aos detalhes.
-        </p>
-      </div>
+<h2>Limpeza profissional com excelência</h2>
 
-      <div class="why-grid">
-        <div class="why-card">
-          <h3>Qualidade</h3>
-          <p>Serviços realizados com alto padrão e muito cuidado.</p>
-        </div>
+<p>
 
-        <div class="why-card">
-          <h3>Confiança</h3>
-          <p>Compromisso com responsabilidade e respeito ao cliente.</p>
-        </div>
+Serviços de limpeza residencial, pós-obra e empresarial com qualidade,
+confiança e atendimento rápido em Lisboa, Cascais e Margem Sul.
 
-        <div class="why-card">
-          <h3>Agilidade</h3>
-          <p>Atendimento prático e eficiente para facilitar sua rotina.</p>
-        </div>
+</p>
 
-        <div class="why-card">
-          <h3>Detalhe</h3>
-          <p>Cada ambiente tratado com capricho e dedicação.</p>
-        </div>
-      </div>
-    </section>
+<a class="btn"
 
-    <section>
-      <div class="cta">
-        <h2>Deixe a limpeza com quem entende</h2>
-        <p>
-          Fale agora com a Lux Clean e solicite o seu orçamento de forma rápida
-          e simples pelo WhatsApp.
-        </p>
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/351924133226?text=Olá,%20quero%20fazer%20o%20meu%20orçamento%20na%20Lux%20Clean."
-          target="_blank"
-        >
-          Pedir orçamento agora
-        </a>
-      </div>
-    </section>
+href="https://wa.me/351924133226">
 
-    <section id="contato">
-      <div class="section-title">
-        <h2>Contato</h2>
-        <p>Entre em contato e marque o seu atendimento.</p>
-      </div>
+Faça já seu orçamento
 
-      <div class="contact-box">
-        <div class="contact-card">
-          <h3>WhatsApp</h3>
-          <a
-            href="https://wa.me/351924133226?text=Olá,%20quero%20mais%20informações%20sobre%20os%20serviços%20da%20Lux%20Clean."
-            target="_blank"
-          >
-            +351 924 133 226
-          </a>
-        </div>
+</a>
+</section>
+<section id="servicos">
 
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p>luxclean@email.com</p>
-        </div>
+<h2 style="text-align:center;
+margin-bottom:60px;
+font-size:40px;
+color:#d4af37;">
 
-        <div class="contact-card">
-          <h3>Atendimento</h3>
-          <p>Portugal</p>
-        </div>
-      </div>
-    </section>
+Nossos Serviços
 
-    <footer>
-      <p>© 2026 Lux Clean - Todos os direitos reservados.</p>
-    </footer>
-  </div>
+</h2>
+
+
+<div style="display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;">
+
+
+<div>
+
+<h3>Limpeza Residencial</h3>
+
+<p>
+
+Limpeza completa de casas e apartamentos com atenção aos detalhes
+e produtos profissionais.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Limpeza Pós-Obra</h3>
+
+<p>
+
+Remoção de poeiras pesadas, resíduos e preparação do ambiente
+para uso imediato.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Limpeza de Escritórios</h3>
+
+<p>
+
+Ambiente limpo e organizado para maior produtividade e conforto
+da sua equipa.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Limpeza Profunda</h3>
+
+<p>
+
+Ideal para mudanças, renovações ou higienização completa do imóvel.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section style="background:#0b0b0b;">
+
+
+<h2 style="text-align:center;
+margin-bottom:60px;
+font-size:40px;
+color:#d4af37;">
+
+Por que escolher a Lux Clean
+
+</h2>
+
+
+<div style="display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;">
+
+
+<div>
+
+✔ Atendimento rápido
+
+</div>
+
+
+<div>
+
+✔ Equipa profissional
+
+</div>
+
+
+<div>
+
+✔ Produtos de qualidade
+
+</div>
+
+
+<div>
+
+✔ Excelência nos detalhes
+
+</div>
+
+
+<div>
+
+✔ Confiança e segurança
+
+</div>
+
+
+<div>
+
+✔ Lisboa • Cascais • Margem Sul
+
+</div>
+
+
+</div>
+
+
+</section>
+<section id="sobre">
+
+<h2 style="text-align:center;
+margin-bottom:40px;
+font-size:40px;
+color:#d4af37;">
+
+Sobre a Lux Clean
+
+</h2>
+
+<p style="max-width:900px;
+margin:0 auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;">
+
+A Lux Clean oferece serviços de limpeza profissional com foco em
+qualidade, confiança e excelência. Trabalhamos com dedicação para
+entregar ambientes limpos, organizados e prontos para o seu conforto,
+seja em residências, escritórios ou limpezas pós-obra.
+
+</p>
+
+</section>
+
+
+
+<section id="contato">
+
+<h2 style="text-align:center;
+margin-bottom:50px;
+font-size:40px;
+color:#d4af37;">
+
+Contato
+
+</h2>
+
+<div style="max-width:800px;
+margin:0 auto;
+text-align:center;
+font-size:20px;
+line-height:2;">
+
+<p><strong>WhatsApp:</strong> <a href="https://wa.me/351924133226" style="color:#d4af37; text-decoration:none;">+351 924 133 226</a></p>
+
+<p><strong>Atendimento:</strong> Lisboa, Cascais e Margem Sul</p>
+
+<p><strong>Orçamentos rápidos e atendimento profissional</strong></p>
+
+<a class="btn" href="https://wa.me/351924133226" style="display:inline-block; margin-top:20px;">
+Fale connosco no WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+
+<footer style="background:black;
+text-align:center;
+padding:30px 20px;
+margin-top:40px;
+font-size:15px;
+color:#cccccc;">
+
+<p>© 2026 Lux Clean - Limpeza Profissional</p>
+<p>Lisboa • Cascais • Margem Sul</p>
+
+</footer>
+
+
+
+<a href="https://wa.me/351924133226"
+style="position:fixed;
+bottom:20px;
+right:20px;
+background:#d4af37;
+color:black;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+z-index:999;">
+
+WhatsApp
+
+</a>
+
 </body>
 </html>
