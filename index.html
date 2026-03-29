@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lux Clean</title>
-  <meta name="description" content="Lux Clean - Limpeza profissional com excelência, confiança e qualidade." />
+  <title>Lux Clean | Limpeza Profissional</title>
+  <meta name="description" content="Lux Clean - Limpeza profissional residencial, empresarial e pós-obra em Lisboa, Cascais e Margem Sul." />
   <style>
     * {
       margin: 0;
@@ -19,11 +19,11 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80');
-background-size: cover;
-background-position: right center;
-background-attachment: fixed;
+        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.82)),
+        url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #ffffff;
       line-height: 1.6;
     }
@@ -34,42 +34,82 @@ background-attachment: fixed;
       top: 0;
       left: 0;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.88);
+      background: rgba(0, 0, 0, 0.9);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
       backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(212,175,55,0.20);
     }
 
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 18px 20px;
+      padding: 16px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      padding: 6px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text .title {
+      font-size: 20px;
+      font-weight: 700;
       color: #d4af37;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-text .subtitle {
+      font-size: 12px;
+      color: #f0f0f0;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      text-transform: uppercase;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    nav ul li a {
+    nav a {
       color: #ffffff;
       text-decoration: none;
       font-size: 16px;
       transition: 0.3s;
     }
 
-    nav ul li a:hover {
+    nav a:hover {
       color: #d4af37;
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      padding: 8px 14px;
+      border-radius: 999px;
     }
 
     .hero {
@@ -78,39 +118,69 @@ background-attachment: fixed;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 140px 20px 80px;
+      padding: 180px 20px 90px;
     }
 
     .hero-content {
       max-width: 900px;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 20px;
+      padding: 40px 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     }
 
     .hero h1 {
-     font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 60px;
+      line-height: 1.08;
+      margin-bottom: 24px;
       color: #ffffff;
     }
 
     .hero p {
-font-size: 16px;
-      color: #e6e6e6;
-      margin-bottom: 35px;
+      font-size: 24px;
+      color: #ececec;
+      max-width: 800px;
+      margin: 0 auto 34px;
     }
 
-    .btn-principal {
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
       display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 16px 28px;
+      transition: 0.3s;
+      font-size: 18px;
+    }
+
+    .btn-primary {
       background: #d4af37;
       color: #000000;
-      text-decoration: none;
-      padding: 16px 34px;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.3s;
     }
 
-    .btn-principal:hover {
-      background: #f1d57a;
+    .btn-primary:hover {
+      background: #e5c14a;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      color: #ffffff;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-secondary:hover {
+      border-color: #d4af37;
+      color: #d4af37;
       transform: translateY(-2px);
     }
 
@@ -121,17 +191,17 @@ font-size: 16px;
     }
 
     .section-title {
-      text-align: center;
-      font-size: 38px;
+      font-size: 40px;
       color: #d4af37;
-      margin-bottom: 18px;
+      text-align: center;
+      margin-bottom: 16px;
     }
 
     .section-subtitle {
       text-align: center;
       max-width: 800px;
-      margin: 0 auto 50px;
-      color: #dddddd;
+      margin: 0 auto 40px;
+      color: #e1e1e1;
       font-size: 18px;
     }
 
@@ -142,28 +212,181 @@ font-size: 16px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(212,175,55,0.18);
-      border-radius: 14px;
-      padding: 28px 22px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: 16px;
+      padding: 26px 22px;
       transition: 0.3s;
+      backdrop-filter: blur(4px);
     }
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: rgba(212,175,55,0.45);
-      background: rgba(255,255,255,0.07);
+      border-color: rgba(212, 175, 55, 0.4);
+      background: rgba(255,255,255,0.08);
     }
 
     .card h3 {
       color: #d4af37;
-      margin-bottom: 12px;
       font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .card p {
-      color: #eaeaea;
+      color: #ededed;
       font-size: 16px;
+    }
+
+    .about-box,
+    .contact-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 20px;
+      padding: 34px 24px;
+      text-align: center;
+    }
+
+    .about-box p,
+    .contact-box p {
+      font-size: 18px;
+      color: #efefef;
+      margin-bottom: 14px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .contact-links a:hover {
+      color: #d4af37;
+    }
+
+    .whatsapp-fixed {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 16px 22px;
+      border-radius: 999px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      z-index: 999;
+    }
+
+    .whatsapp-fixed:hover {
+      background: #e5c14a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px 40px;
+      color: #cccccc;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .hero {
+        padding-top: 220px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 21px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .brand img {
+        width: 64px;
+        height: 64px;
+      }
+
+      .brand-text .title {
+        font-size: 18px;
+      }
+
+      .brand-text .subtitle {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+      }
+
+      nav ul {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 15px;
+      }
+
+      .hero {
+        padding: 220px 14px 70px;
+      }
+
+      .hero-content {
+        padding: 28px 18px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .section-subtitle,
+      .about-box p,
+      .contact-box p {
+        font-size: 17px;
+      }
+
+      .whatsapp-fixed {
+        right: 12px;
+        bottom: 12px;
+        padding: 14px 18px;
+      }
     }
   </style>
 </head>
@@ -171,15 +394,21 @@ font-size: 16px;
 
   <header>
     <div class="nav-container">
-     <div class="logo">
-    <img src="logo.png" alt="Lux Clean" style="height:50px;">
-     </div>
+      <div class="brand">
+        <img src="logo.png" alt="Lux Clean">
+        <div class="brand-text">
+          <span class="title">Lux Clean</span>
+          <span class="subtitle">Limpeza Profissional</span>
+        </div>
+      </div>
+
       <nav>
         <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contato">Contato</a></li>
+          <li><a href="#english" class="lang-btn">English</a></li>
         </ul>
       </nav>
     </div>
@@ -192,193 +421,89 @@ font-size: 16px;
         A Lux Clean oferece serviços de limpeza residencial, empresarial e pós-obra
         com atendimento profissional em Lisboa, Cascais e Margem Sul.
       </p>
-      <a class="btn-principal" href="https://wa.me/351924133226" target="_blank">
-        Faça já seu orçamento
-      </a>
+
+      <div class="hero-buttons">
+        <a class="btn-primary" href="https://wa.me/351924133226" target="_blank">Faça já seu orçamento</a>
+        <a class="btn-secondary" href="#servicos">Ver serviços</a>
+      </div>
     </div>
-  </section><section class="section" id="servicos">
+  </section>
 
+  <section class="section" id="servicos">
     <h2 class="section-title">Nossos Serviços</h2>
-
     <p class="section-subtitle">
-
       Trabalhamos com limpeza profissional adaptada às necessidades de cada cliente,
       garantindo qualidade, confiança e atenção aos detalhes.
-
     </p>
 
     <div class="cards">
-
       <div class="card">
         <h3>Limpeza Residencial</h3>
-        <p>
-          Limpeza completa de casas e apartamentos com organização,
-          higiene profunda e acabamento profissional.
-        </p>
+        <p>Limpeza completa de casas e apartamentos, com organização, higiene profunda e acabamento profissional.</p>
       </div>
 
       <div class="card">
         <h3>Limpeza Pós-Obra</h3>
-        <p>
-          Remoção de poeiras pesadas e resíduos após obras,
-          deixando o espaço pronto para uso imediato.
-        </p>
+        <p>Remoção de poeiras pesadas e resíduos após obras, deixando o espaço pronto para uso imediato.</p>
       </div>
 
       <div class="card">
         <h3>Limpeza de Escritórios</h3>
-        <p>
-          Ambientes corporativos limpos e organizados para maior
-          conforto e produtividade da equipa.
-        </p>
+        <p>Ambientes corporativos limpos e organizados para maior conforto e produtividade da equipa.</p>
       </div>
 
       <div class="card">
         <h3>Limpeza Profunda</h3>
-        <p>
-          Serviço ideal para mudanças, higienização completa
-          e manutenção detalhada do imóvel.
-        </p>
+        <p>Serviço ideal para mudanças, higienização completa e manutenção detalhada do imóvel.</p>
       </div>
-
     </div>
-
   </section>
 
-
-
-  <section class="section">
-
-    <h2 class="section-title">Por que escolher a Lux Clean</h2>
-
-    <p class="section-subtitle">
-
-      Trabalhamos com compromisso, qualidade e confiança para entregar
-      resultados profissionais em cada serviço realizado.
-
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Atendimento rápido</h3>
-        <p>
-          Resposta rápida no WhatsApp e agendamento flexível conforme
-          sua necessidade.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Equipa profissional</h3>
-        <p>
-          Profissionais responsáveis e preparados para garantir
-          um serviço de excelência.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Produtos de qualidade</h3>
-        <p>
-          Utilizamos produtos adequados para cada tipo de ambiente
-          e superfície.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Confiança e segurança</h3>
-        <p>
-          Trabalhamos com respeito, organização e compromisso
-          com cada cliente.
-        </p>
-      </div>
-
-    </div>
-
-  </section><section class="section" id="sobre">
-
+  <section class="section" id="sobre">
     <h2 class="section-title">Sobre a Lux Clean</h2>
-
-    <p class="section-subtitle">
-
-      A Lux Clean oferece serviços de limpeza profissional com foco em qualidade,
-      confiança e excelência. Trabalhamos com dedicação para entregar ambientes
-      limpos, organizados e preparados para o conforto dos nossos clientes.
-
-      Atendemos Lisboa, Cascais e Margem Sul com rapidez, profissionalismo
-      e atenção aos detalhes.
-
-    </p>
-
+    <div class="about-box">
+      <p>
+        A Lux Clean é dedicada a oferecer um serviço de limpeza profissional, discreto e de confiança,
+        com foco em qualidade, pontualidade e excelente apresentação.
+      </p>
+      <p>
+        Atendemos clientes particulares e empresariais em Lisboa, Cascais e Margem Sul,
+        com soluções ajustadas a cada necessidade.
+      </p>
+    </div>
   </section>
-
-
 
   <section class="section" id="contato">
-
     <h2 class="section-title">Contato</h2>
+    <div class="contact-box">
+      <p>Peça já o seu orçamento e fale diretamente conosco.</p>
 
-    <p class="section-subtitle">
-
-      Solicite já o seu orçamento rápido pelo WhatsApp.
-      Atendimento profissional e resposta imediata.
-
-    </p>
-
-    <div style="text-align:center;">
-
-      <a class="btn-principal"
-         href="https://wa.me/351924133226"
-         target="_blank">
-
-         Fale connosco no WhatsApp
-
-      </a>
-
+      <div class="contact-links">
+        <a href="https://wa.me/351924133226" target="_blank">WhatsApp: +351 924 133 226</a>
+        <a href="mailto:contato@luxcleanlimpeza.pt">E-mail: contato@luxcleanlimpeza.pt</a>
+        <a href="https://luxcleanlimpeza.pt" target="_blank">Site: luxcleanlimpeza.pt</a>
+      </div>
     </div>
-
   </section>
 
+  <section class="section" id="english">
+    <h2 class="section-title">English</h2>
+    <div class="about-box">
+      <p>
+        Lux Clean provides professional residential, office and post-construction cleaning
+        services in Lisbon, Cascais and Margem Sul.
+      </p>
+      <p>
+        Contact us for a quick quote and reliable service.
+      </p>
+    </div>
+  </section>
 
-
-  <footer style="
-    text-align:center;
-    padding:30px 20px;
-    background:black;
-    border-top:1px solid rgba(212,175,55,0.25);
-  ">
-
-    <p style="color:#cccccc;">
-      © 2026 Lux Clean — Limpeza profissional
-    </p>
-
-    <p style="color:#aaaaaa; margin-top:6px;">
-      Lisboa • Cascais • Margem Sul
-    </p>
-
+  <footer>
+    © 2026 Lux Clean — Limpeza Profissional
   </footer>
 
-
-
-  <a href="https://wa.me/351924133226"
-     target="_blank"
-     style="
-     position:fixed;
-     bottom:20px;
-     right:20px;
-     background:#d4af37;
-     color:black;
-     padding:15px 22px;
-     border-radius:50px;
-     font-weight:bold;
-     text-decoration:none;
-     box-shadow:0 6px 18px rgba(0,0,0,0.4);
-     z-index:999;
-     ">
-
-     WhatsApp
-
-  </a>
-
+  <a class="whatsapp-fixed" href="https://wa.me/351924133226" target="_blank">WhatsApp</a>
 
 </body>
 </html>
