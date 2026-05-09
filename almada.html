@@ -5,346 +5,256 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Limpeza Profissional em Almada | LuxClean</title>
+<meta name="description" content="Limpeza profissional em Almada. Limpeza residencial, escritórios, condomínios, pós-obra e higienização de sofás com a LuxClean.">
 
-<meta name="description" content="Empresa de limpeza profissional em Almada. Limpeza residencial, escritórios, condomínios, pós-obra e higienização de sofás.">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#eef8fc;color:#082033;overflow-x:hidden}
+.container{width:min(1180px,92%);margin:auto}
+header{background:white;position:sticky;top:0;z-index:50;box-shadow:0 12px 35px rgba(0,50,80,.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#082033}
+.brand img{width:72px;height:54px;object-fit:contain}
+.brand strong{display:block;font-size:30px;font-weight:900}
+.brand small{font-size:16px;color:#607584;font-weight:700}
+.lang{display:flex;gap:12px}
+.lang span{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px}
+.lang .active{background:#0b6398;color:white}
+.lang .off{border:2px solid #c8dce8;color:#0b3652}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+.hero{padding:80px 0 90px;background:linear-gradient(180deg,#f7fdff,#eaf7fc)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
+.eyebrow{display:inline-block;background:#14b7df;color:white;padding:12px 24px;border-radius:0 0 28px 28px;font-weight:900;letter-spacing:.08em;margin-bottom:30px}
+.hero h1{font-size:58px;line-height:1.05;font-weight:900;margin-bottom:22px;color:#082033}
+.hero p{font-size:20px;line-height:1.75;color:#557080;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:#25D366;color:white;text-decoration:none;border-radius:999px;padding:19px 34px;font-size:18px;font-weight:900;box-shadow:0 18px 40px rgba(37,211,102,.3)}
+.photo-card{border-radius:42px;overflow:hidden;box-shadow:0 28px 70px rgba(0,55,90,.16);background:white}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr}
+.photo-grid img{width:100%;height:280px;object-fit:cover;display:block}
+
+.section{padding:90px 0}
+.blue{background:linear-gradient(135deg,#043348,#075f82);color:white}
+.section-title{text-align:center;margin-bottom:46px}
+.section-title span{font-weight:900;letter-spacing:.18em;color:#18bfe8}
+.section-title h2{font-size:44px;line-height:1.15;margin-top:14px}
+.section-title p{max-width:820px;margin:20px auto 0;font-size:18px;line-height:1.8;color:#5d7483}
+.blue .section-title p{color:#ccecf6}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:white;border-radius:28px;padding:30px;box-shadow:0 18px 45px rgba(0,50,80,.08)}
+.card .icon{font-size:34px;margin-bottom:18px}
+.card h3{font-size:22px;margin-bottom:12px;color:#082033}
+.card p{color:#607584;line-height:1.7}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:28px}
+.step span{display:block;font-size:26px;font-weight:900;color:#19d4ff;margin-bottom:14px}
+.step h3{font-size:21px;margin-bottom:10px}
+.step p{line-height:1.7;color:#d4f2fa}
+
+.areas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.areas span{background:white;padding:14px 22px;border-radius:999px;font-weight:900;box-shadow:0 12px 28px rgba(0,50,80,.08)}
+
+.quote{background:white;border-radius:36px;padding:44px;box-shadow:0 22px 55px rgba(0,50,80,.1);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.quote h2{font-size:38px;line-height:1.15;margin-bottom:16px}
+.quote p{font-size:18px;line-height:1.8;color:#607584}
+
+footer{background:#061c2b;color:white;text-align:center;padding:42px 20px 95px}
+footer h2{font-size:28px;margin-bottom:10px}
+footer p{opacity:.75;line-height:1.8}
+.fixed-whatsapp{position:fixed;left:18px;right:18px;bottom:16px;background:#25D366;color:white;text-decoration:none;border-radius:999px;padding:18px;text-align:center;font-size:22px;font-weight:900;box-shadow:0 18px 40px rgba(0,0,0,.22);z-index:99}
+
+@media(max-width:850px){
+.hero-grid{grid-template-columns:1fr}
+.hero h1{font-size:42px}
+.photo-grid img{height:210px}
+.cards,.steps{grid-template-columns:1fr}
+.quote{grid-template-columns:1fr;padding:30px}
+.section-title h2{font-size:34px}
+.lang span{width:58px;height:58px}
 }
-
-body{
-background:#f4f8fb;
-color:#0d1b2a;
-}
-
-header{
-background:white;
-padding:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.nav{
-max-width:1200px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo img{
-width:70px;
-}
-
-.logo h1{
-font-size:28px;
-font-weight:800;
-}
-
-.hero{
-padding:100px 20px;
-background:linear-gradient(135deg,#0f5fa8,#0d7bdc);
-color:white;
-text-align:center;
-}
-
-.hero h2{
-font-size:52px;
-margin-bottom:20px;
-font-weight:800;
-}
-
-.hero p{
-max-width:850px;
-margin:auto;
-font-size:20px;
-line-height:1.7;
-}
-
-.btn{
-display:inline-block;
-margin-top:35px;
-background:#25D366;
-color:white;
-padding:18px 35px;
-border-radius:50px;
-text-decoration:none;
-font-weight:700;
-font-size:18px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.section{
-padding:90px 20px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-.title{
-font-size:42px;
-margin-bottom:25px;
-font-weight:800;
-color:#0f172a;
-}
-
-.text{
-font-size:19px;
-line-height:1.9;
-color:#475569;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:50px;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-bottom:15px;
-font-size:24px;
-}
-
-.card p{
-color:#64748b;
-line-height:1.7;
-}
-
-.blue{
-background:#0b2942;
-color:white;
-}
-
-.blue .title{
-color:white;
-}
-
-footer{
-background:#07131f;
-color:white;
-padding:50px 20px;
-text-align:center;
-}
-
-footer p{
-opacity:0.8;
-line-height:1.8;
-}
-
-.whatsapp-fixed{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:16px 28px;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-z-index:999;
-}
-
-@media(max-width:768px){
-
-.hero h2{
-font-size:38px;
-}
-
-.title{
-font-size:34px;
-}
-
-.text{
-font-size:17px;
-}
-
-}
-
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="nav">
-
-<div class="logo">
-<img src="logo.png">
+<div class="container header-inner">
+<a class="brand" href="index.html">
+<img src="luxclean-logo.png" alt="LuxClean">
 <div>
-<h1>LuxClean</h1>
-<p>Limpeza Profissional</p>
+<strong>LuxClean</strong>
+<small>Limpeza Profissional</small>
 </div>
-</div>
+</a>
 
+<div class="lang">
+<span class="active">PT</span>
+<span class="off">EN</span>
+</div>
 </div>
 </header>
 
 <section class="hero">
+<div class="container hero-grid">
 
-<h2>Limpeza Profissional em Almada</h2>
-
+<div>
+<div class="eyebrow">LIMPEZA EM ALMADA</div>
+<h1>Limpeza Profissional em Almada</h1>
 <p>
-A LuxClean oferece serviços profissionais de limpeza em Almada com qualidade,
-pontualidade e atendimento personalizado para casas, apartamentos, escritórios,
-condomínios e estofos.
+Serviços de limpeza para casas, apartamentos, escritórios, condomínios,
+pós-obra e higienização de sofás em Almada e arredores.
 </p>
-
-<a class="btn" target="_blank"
-href="https://wa.me/351924133226?text=Olá%20vim%20pela%20página%20de%20Almada%20da%20LuxClean.%20Gostaria%20de%20um%20orçamento">
+<a class="btn" target="_blank" href="https://wa.me/351924133226?text=Olá%2C%20vim%20pela%20página%20de%20Almada%20da%20LuxClean.%20Gostaria%20de%20pedir%20um%20orçamento.">
 Pedir orçamento
 </a>
+</div>
 
+<div class="photo-card">
+<div class="photo-grid">
+<img src="hero.jpg" alt="Limpeza profissional">
+<img src="galeria-1.jpg" alt="Limpeza em Almada">
+<img src="galeria-2.jpg" alt="Serviço de limpeza">
+<img src="galeria-3.jpg" alt="LuxClean">
+</div>
+</div>
+
+</div>
 </section>
 
 <section class="section">
-
 <div class="container">
 
-<h2 class="title">Serviços de limpeza em Almada</h2>
-
-<p class="text">
-Trabalhamos com limpeza residencial, limpeza pós-obra,
-limpeza de escritórios, limpeza de condomínios e higienização
-de sofás e estofos em Almada e arredores.
+<div class="section-title">
+<span>SERVIÇOS</span>
+<h2>O que fazemos em Almada</h2>
+<p>
+A LuxClean trabalha com soluções flexíveis para limpeza particular,
+empresarial e serviços pontuais.
 </p>
+</div>
 
-<div class="grid">
-
+<div class="cards">
 <div class="card">
+<div class="icon">🏠</div>
 <h3>Limpeza residencial</h3>
-<p>
-Limpeza profunda para apartamentos, moradias e alojamentos.
-</p>
+<p>Casas, apartamentos e alojamentos com limpeza cuidada e organizada.</p>
 </div>
 
 <div class="card">
-<h3>Limpeza de escritórios</h3>
-<p>
-Ambientes organizados e higienizados para empresas e espaços comerciais.
-</p>
+<div class="icon">🏢</div>
+<h3>Escritórios</h3>
+<p>Limpeza profissional para empresas, lojas e espaços comerciais.</p>
 </div>
 
 <div class="card">
-<h3>Limpeza pós-obra</h3>
-<p>
-Remoção de pó, resíduos e limpeza detalhada após remodelações.
-</p>
+<div class="icon">🧹</div>
+<h3>Pós-obra</h3>
+<p>Remoção de pó, resíduos e sujidade após obras ou remodelações.</p>
 </div>
 
 <div class="card">
-<h3>Higienização de sofás</h3>
-<p>
-Limpeza e higienização profissional de estofos com extração.
-</p>
+<div class="icon">🛋️</div>
+<h3>Sofás e estofos</h3>
+<p>Limpeza e higienização de sofás, cadeiras, colchões e estofos.</p>
+</div>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 <section class="section blue">
-
 <div class="container">
 
-<h2 class="title">Atendimento em Almada e arredores</h2>
-
-<p class="text">
-Atendemos Almada, Cacilhas, Costa da Caparica, Feijó,
-Laranjeiro, Sobreda e zonas próximas.
+<div class="section-title">
+<span>SIMPLES E RÁPIDO</span>
+<h2>Como funciona o pedido</h2>
+<p>
+Enviamos um atendimento direto pelo WhatsApp para perceber melhor o serviço.
 </p>
-
 </div>
 
+<div class="steps">
+<div class="step">
+<span>01</span>
+<h3>Envia o pedido</h3>
+<p>Fale diretamente pelo WhatsApp.</p>
+</div>
+
+<div class="step">
+<span>02</span>
+<h3>Indica o serviço</h3>
+<p>Diga se é casa, escritório, sofá, condomínio ou pós-obra.</p>
+</div>
+
+<div class="step">
+<span>03</span>
+<h3>Recebe orientação</h3>
+<p>Podemos pedir fotos, medidas ou detalhes do espaço.</p>
+</div>
+
+<div class="step">
+<span>04</span>
+<h3>Agendamento</h3>
+<p>Combinamos data, horário e condições do serviço.</p>
+</div>
+</div>
+
+</div>
 </section>
 
 <section class="section">
-
 <div class="container">
 
-<h2 class="title">Porque escolher a LuxClean</h2>
+<div class="section-title">
+<span>ÁREAS</span>
+<h2>Atendimento em Almada e arredores</h2>
+<p>Deslocamo-nos até si conforme disponibilidade e tipo de serviço.</p>
+</div>
 
-<div class="grid">
+<div class="areas">
+<span>Almada</span>
+<span>Cacilhas</span>
+<span>Feijó</span>
+<span>Laranjeiro</span>
+<span>Sobreda</span>
+<span>Charneca da Caparica</span>
+<span>Costa da Caparica</span>
+<span>Margem Sul</span>
+</div>
 
-<div class="card">
-<h3>Atendimento rápido</h3>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="quote">
+<div>
+<h2>Peça o seu orçamento para Almada</h2>
 <p>
-Respondemos rapidamente pelo WhatsApp para facilitar o seu pedido.
+Envie o serviço pretendido, localidade, data desejada e algumas fotos do espaço.
+Assim conseguimos orientar melhor.
 </p>
 </div>
 
-<div class="card">
-<h3>Qualidade profissional</h3>
-<p>
-Utilizamos equipamentos e produtos adequados para cada serviço.
-</p>
-</div>
-
-<div class="card">
-<h3>Equipa de confiança</h3>
-<p>
-Profissionais responsáveis e focados em qualidade e detalhe.
-</p>
+<a class="btn" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Estou%20em%20Almada%20e%20gostaria%20de%20um%20orçamento.%0A%0AServiço%3A%0ALocalidade%3A%0AQuando%20precisa%3A">
+Enviar pelo WhatsApp
+</a>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 <footer>
-
 <h2>LuxClean Limpeza Profissional</h2>
-
-<p>
-Almada • Lisboa • Margem Sul • Cascais
-</p>
-
-<p>
-© 2026 LuxClean. Todos os direitos reservados.
-</p>
-
+<p>Almada • Lisboa • Margem Sul • Cascais</p>
+<p>© 2026 LuxClean. Todos os direitos reservados.</p>
 </footer>
 
-<a class="whatsapp-fixed"
-target="_blank"
-href="https://wa.me/351924133226?text=Olá%20vim%20pela%20página%20de%20Almada%20da%20LuxClean">
+<a class="fixed-whatsapp" target="_blank" href="https://wa.me/351924133226?text=Olá%2C%20vim%20pela%20página%20de%20Almada%20da%20LuxClean.%20Gostaria%20de%20um%20orçamento.">
 WhatsApp
 </a>
 
