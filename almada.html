@@ -1009,4 +1009,150 @@ Atendimento conforme disponibilidade, tipo de serviço e localização.
 <h2 data-pt="Preencha os dados e envie direto para o WhatsApp." data-en="Fill in your details and send directly to WhatsApp.">
 Preencha os dados e envie direto para o WhatsApp.
 </h2>
-<p data-pt="Ao clicar no botão, o WhatsApp abre com a mensagem organizada: nome, telefone, localidade, ser
+<p data-pt="Ao clicar no botão, o WhatsApp abre com a mensagem organizada: nome, telefone, localidade, serviço e detalhes do pedido." data-en="When clicking the button, WhatsApp opens with an organized message: name, phone, location, service and request details.">
+Ao clicar no botão, o WhatsApp abre com a mensagem organizada:
+nome, telefone, localidade, serviço e detalhes do pedido.
+</p>
+
+<div class="form-mini">
+<div data-pt="✓ Atendimento em Almada" data-en="✓ Service in Almada">✓ Atendimento em Almada</div>
+<div data-pt="✓ Pedido mais organizado" data-en="✓ More organized request">✓ Pedido mais organizado</div>
+<div data-pt="✓ Resposta mais rápida" data-en="✓ Faster response">✓ Resposta mais rápida</div>
+</div>
+</div>
+
+<form class="form-card" onsubmit="sendWhatsApp(event)">
+
+<div class="form-grid">
+
+<div class="field">
+<label data-pt="Nome" data-en="Name">Nome</label>
+<input id="nome" type="text" placeholder="O seu nome">
+</div>
+
+<div class="field">
+<label data-pt="Telefone" data-en="Phone">Telefone</label>
+<input id="telefone" type="text" placeholder="+351 ...">
+</div>
+
+<div class="field">
+<label data-pt="Localidade" data-en="Location">Localidade</label>
+<input id="localidade" type="text" placeholder="Ex: Almada, Cacilhas, Feijó...">
+</div>
+
+<div class="field">
+<label data-pt="Serviço" data-en="Service">Serviço</label>
+<select id="servico">
+<option value="">Escolha uma opção</option>
+<option>Limpeza residencial</option>
+<option>Limpeza de escritório</option>
+<option>Limpeza de condomínio</option>
+<option>Limpeza pós-obra</option>
+<option>Limpeza e higienização de sofá</option>
+<option>Outro serviço</option>
+</select>
+</div>
+
+<div class="field full">
+<label data-pt="Quando precisa?" data-en="When do you need it?">Quando precisa?</label>
+<input id="data" type="text" placeholder="Ex: esta semana, sábado, urgente...">
+</div>
+
+<div class="field full">
+<label data-pt="Mensagem" data-en="Message">Mensagem</label>
+<textarea id="mensagem" placeholder="Descreva o espaço, quantidade de divisões, sofá, escritório, pós-obra, etc."></textarea>
+</div>
+
+</div>
+
+<button class="submit" type="submit" data-pt="Enviar pedido pelo WhatsApp" data-en="Send request by WhatsApp">
+Enviar pedido pelo WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+<section class="section final">
+<div class="container">
+
+<div class="final-box">
+
+<h2 data-pt="Precisa de limpeza em Almada?" data-en="Need cleaning in Almada?">Precisa de limpeza em Almada?</h2>
+
+<p data-pt="Fale com a LuxClean pelo WhatsApp. Envie o serviço, a localidade, quando precisa e alguns detalhes. Respondemos da forma mais organizada possível." data-en="Contact LuxClean by WhatsApp. Send the service, location, date and details. We will reply in the most organized way possible.">
+Fale com a LuxClean pelo WhatsApp. Envie o serviço, a localidade, quando precisa
+e alguns detalhes. Respondemos da forma mais organizada possível.
+</p>
+
+<a class="btn btn-green" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Estou%20em%20Almada%20e%20gostaria%20de%20um%20orçamento.%0A%0AServiço:%0ALocalidade:%0AQuando%20precisa:%0ADetalhes:" data-pt="Falar no WhatsApp" data-en="Chat on WhatsApp">
+Falar no WhatsApp
+</a>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<h2>LuxClean Limpeza Profissional</h2>
+<p>Almada • Lisboa • Margem Sul • Cascais</p>
+<p>© 2026 LuxClean. Todos os direitos reservados.</p>
+</footer>
+
+<a class="fixed-whatsapp" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Vim%20pela%20página%20de%20Almada%20e%20gostaria%20de%20um%20orçamento.">
+WhatsApp
+</a>
+
+<script>
+
+function setLang(lang, btn){
+
+document.querySelectorAll('.lang button').forEach(b => b.classList.remove('active'));
+
+btn.classList.add('active');
+
+document.querySelectorAll('[data-pt]').forEach(el => {
+
+el.innerHTML = el.getAttribute('data-' + lang);
+
+});
+
+}
+
+function sendWhatsApp(event){
+
+event.preventDefault();
+
+const nome = document.getElementById('nome').value.trim();
+const telefone = document.getElementById('telefone').value.trim();
+const localidade = document.getElementById('localidade').value.trim();
+const servico = document.getElementById('servico').value.trim();
+const data = document.getElementById('data').value.trim();
+const mensagem = document.getElementById('mensagem').value.trim();
+
+const texto =
+`Olá, vim pela página de Almada da LuxClean. Gostaria de pedir um orçamento.
+
+Nome: ${nome}
+Telefone: ${telefone}
+Localidade: ${localidade}
+Serviço: ${servico}
+Quando precisa: ${data}
+Mensagem: ${mensagem}`;
+
+const url = 'https://wa.me/351924133226?text=' + encodeURIComponent(texto);
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
