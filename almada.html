@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Limpeza Profissional em Almada | LuxClean</title>
 
-<meta name="description" content="Limpeza profissional em Almada com atendimento premium. Limpeza residencial, escritórios, condomínios, pós-obra e higienização de sofás.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description" content="Limpeza profissional em Almada. Serviços de limpeza residencial, escritórios, condomínios, pós-obra e sofás. LuxClean.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -29,18 +24,13 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#eef8fc;
-color:#082033;
+background:#f4fbff;
+color:#061f33;
 overflow-x:hidden;
 }
 
 a{
 text-decoration:none;
-}
-
-img{
-max-width:100%;
-display:block;
 }
 
 .container{
@@ -52,7 +42,7 @@ margin:auto;
 position:sticky;
 top:0;
 z-index:999;
-background:rgba(255,255,255,.94);
+background:rgba(255,255,255,.96);
 backdrop-filter:blur(18px);
 box-shadow:0 12px 35px rgba(0,60,100,.08);
 }
@@ -61,96 +51,91 @@ box-shadow:0 12px 35px rgba(0,60,100,.08);
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:18px 0;
 gap:20px;
+padding:18px 0;
 }
 
 .brand{
 display:flex;
 align-items:center;
 gap:14px;
-color:#082033;
+color:#061f33;
 }
 
-.brand-logo{
-width:78px;
-height:58px;
+.brand img{
+width:74px;
+height:54px;
 object-fit:contain;
-border-radius:14px;
 }
 
-.brand-title{
-font-size:34px;
+.brand-name{
+font-size:32px;
 font-weight:900;
-line-height:1;
 letter-spacing:-1px;
+line-height:1;
 }
 
-.brand-subtitle{
-font-size:16px;
+.brand-sub{
+font-size:15px;
 font-weight:700;
-color:#617886;
+color:#5d7484;
 margin-top:6px;
 }
 
-.header-actions{
+.lang{
 display:flex;
-align-items:center;
-gap:12px;
+gap:10px;
 }
 
-.lang-btn{
-width:64px;
-height:64px;
+.lang button{
+width:58px;
+height:58px;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-font-weight:900;
-}
-
-.lang-active{
-background:#08699d;
-color:white;
-box-shadow:0 12px 28px rgba(8,105,157,.25);
-}
-
-.lang-outline{
-border:2px solid #c8dce8;
-color:#0b3754;
+border:2px solid #cbe2ef;
 background:white;
+font-size:20px;
+font-weight:900;
+color:#073a58;
+cursor:pointer;
+}
+
+.lang button.active{
+background:#076b9e;
+color:white;
+border-color:#076b9e;
+box-shadow:0 12px 28px rgba(7,107,158,.24);
 }
 
 .hero{
 position:relative;
-padding:92px 0 95px;
+padding:95px 0;
 background:
-radial-gradient(circle at 12% 15%,rgba(25,190,230,.18),transparent 30%),
-linear-gradient(180deg,#f9fdff 0%,#eef8fc 100%);
+radial-gradient(circle at 20% 10%,rgba(25,196,232,.20),transparent 28%),
+radial-gradient(circle at 85% 20%,rgba(7,107,158,.14),transparent 28%),
+linear-gradient(180deg,#ffffff 0%,#edf8fd 100%);
 overflow:hidden;
 }
 
 .hero::before{
 content:"";
 position:absolute;
-top:-120px;
-right:-120px;
-width:380px;
-height:380px;
+right:-150px;
+top:-150px;
+width:420px;
+height:420px;
 border-radius:50%;
-background:rgba(13,158,210,.13);
+background:rgba(7,107,158,.10);
 }
 
 .hero::after{
 content:"";
 position:absolute;
+left:-180px;
 bottom:-180px;
-left:-130px;
-width:420px;
-height:420px;
+width:460px;
+height:460px;
 border-radius:50%;
-background:rgba(0,100,150,.08);
+background:rgba(37,211,102,.10);
 }
 
 .hero-grid{
@@ -158,74 +143,72 @@ position:relative;
 z-index:2;
 display:grid;
 grid-template-columns:1.05fr .95fr;
-gap:46px;
+gap:48px;
 align-items:center;
 }
 
-.kicker{
+.badge{
 display:inline-flex;
 align-items:center;
 gap:10px;
-background:#ffffff;
-border:1px solid rgba(8,105,157,.12);
-box-shadow:0 12px 28px rgba(0,65,100,.08);
+background:white;
+border:1px solid rgba(7,107,158,.12);
 padding:12px 18px;
 border-radius:999px;
+box-shadow:0 12px 30px rgba(0,60,100,.08);
 font-size:13px;
 font-weight:900;
 letter-spacing:.12em;
-color:#0873a9;
-margin-bottom:24px;
+color:#076b9e;
+margin-bottom:26px;
 }
 
-.kicker-dot{
+.dot{
 width:10px;
 height:10px;
-background:#19c4e8;
 border-radius:50%;
-box-shadow:0 0 0 7px rgba(25,196,232,.13);
+background:#21c7e8;
+box-shadow:0 0 0 7px rgba(33,199,232,.14);
 }
 
-.hero-title{
-font-size:62px;
+.hero h1{
+font-size:64px;
 line-height:1.02;
-letter-spacing:-2.4px;
+letter-spacing:-2.5px;
 font-weight:900;
-color:#06253a;
+color:#061f33;
 margin-bottom:24px;
 }
 
-.hero-title span{
-color:#0879b5;
+.hero h1 span{
+color:#077cb5;
 }
 
-.hero-text{
+.hero p{
 font-size:20px;
-line-height:1.8;
-color:#526e7e;
+line-height:1.85;
+color:#526f80;
 max-width:680px;
-margin-bottom:32px;
+margin-bottom:34px;
 }
 
-.hero-buttons{
+.actions{
 display:flex;
 gap:14px;
 flex-wrap:wrap;
-align-items:center;
 }
 
 .btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-gap:10px;
 border-radius:999px;
 padding:18px 30px;
 font-size:17px;
 font-weight:900;
-transition:.25s;
 border:0;
 cursor:pointer;
+transition:.25s;
 }
 
 .btn:hover{
@@ -238,248 +221,60 @@ color:white;
 box-shadow:0 18px 40px rgba(37,211,102,.32);
 }
 
-.btn-blue{
-background:#073a58;
+.btn-dark{
+background:#06334d;
 color:white;
-box-shadow:0 18px 40px rgba(7,58,88,.18);
+box-shadow:0 18px 40px rgba(6,51,77,.18);
 }
 
-.btn-light{
-background:white;
-color:#073a58;
-box-shadow:0 15px 35px rgba(0,55,90,.09);
-}
-
-.trust-row{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-margin-top:34px;
-max-width:680px;
-}
-
-.trust-card{
-background:white;
-border:1px solid rgba(8,105,157,.1);
-box-shadow:0 12px 30px rgba(0,65,100,.07);
-border-radius:22px;
-padding:18px;
-}
-
-.trust-card strong{
-display:block;
-font-size:23px;
-font-weight:900;
-color:#073a58;
-}
-
-.trust-card span{
-font-size:13px;
-font-weight:700;
-color:#647987;
-}
-
-.visual-card{
-background:white;
-padding:14px;
+.panel{
+background:rgba(255,255,255,.88);
+border:1px solid rgba(7,107,158,.12);
+box-shadow:0 30px 80px rgba(0,60,100,.13);
 border-radius:42px;
-box-shadow:0 35px 80px rgba(0,60,95,.16);
+padding:38px;
 position:relative;
 overflow:hidden;
 }
 
-.visual-badge{
+.panel::before{
+content:"";
 position:absolute;
-z-index:3;
-left:30px;
-top:30px;
-background:rgba(255,255,255,.92);
-backdrop-filter:blur(12px);
-border-radius:24px;
-padding:18px 20px;
-box-shadow:0 16px 40px rgba(0,0,0,.12);
+right:-80px;
+top:-80px;
+width:220px;
+height:220px;
+border-radius:50%;
+background:rgba(33,199,232,.14);
 }
 
-.visual-badge strong{
-display:block;
-font-size:18px;
-color:#073a58;
-font-weight:900;
-}
-
-.visual-badge span{
-font-size:13px;
-font-weight:700;
-color:#607584;
-}
-
-.visual-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-border-radius:32px;
-overflow:hidden;
-}
-
-.visual-grid img{
-width:100%;
-height:245px;
-object-fit:cover;
-}
-
-.visual-grid img:nth-child(1){
-grid-row:span 2;
-height:500px;
-}
-
-.section{
-padding:92px 0;
-}
-
-.section-white{
-background:white;
-}
-
-.section-blue{
-background:
-radial-gradient(circle at 85% 12%,rgba(25,196,232,.22),transparent 25%),
-linear-gradient(135deg,#042d43,#075f82 55%,#064664);
-color:white;
-}
-
-.section-head{
-max-width:820px;
-margin:0 auto 50px;
-text-align:center;
-}
-
-.eyebrow{
-font-size:13px;
-font-weight:900;
-letter-spacing:.18em;
-text-transform:uppercase;
-color:#0b84bd;
-margin-bottom:13px;
-}
-
-.section-blue .eyebrow{
-color:#27d6ff;
-}
-
-.section-title{
-font-size:46px;
-line-height:1.12;
-letter-spacing:-1.5px;
-font-weight:900;
-color:#082033;
-}
-
-.section-blue .section-title{
-color:white;
-}
-
-.section-text{
-margin-top:18px;
-font-size:18px;
-line-height:1.85;
-color:#607584;
-}
-
-.section-blue .section-text{
-color:#cdeef8;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:22px;
-}
-
-.card{
-background:white;
-border:1px solid rgba(8,105,157,.08);
-border-radius:30px;
-padding:30px;
-box-shadow:0 18px 45px rgba(0,60,100,.08);
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 25px 60px rgba(0,60,100,.12);
-}
-
-.card-icon{
-width:58px;
-height:58px;
-border-radius:20px;
-background:#e4f7ff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-margin-bottom:20px;
-}
-
-.card h3{
-font-size:22px;
-font-weight:900;
-color:#082033;
-margin-bottom:12px;
-}
-
-.card p{
-font-size:16px;
-line-height:1.75;
-color:#607584;
-}
-
-.premium-box{
-background:white;
-border-radius:38px;
-box-shadow:0 25px 65px rgba(0,60,100,.1);
-overflow:hidden;
-display:grid;
-grid-template-columns:.95fr 1.05fr;
-}
-
-.premium-image{
-background:url('galeria-1.jpg') center/cover no-repeat;
-min-height:520px;
-}
-
-.premium-content{
-padding:54px;
-}
-
-.premium-content h2{
-font-size:42px;
+.panel h2{
+position:relative;
+z-index:2;
+font-size:34px;
 line-height:1.15;
-letter-spacing:-1px;
 font-weight:900;
 margin-bottom:20px;
-color:#082033;
+color:#061f33;
 }
 
-.premium-content p{
-font-size:18px;
-line-height:1.85;
-color:#607584;
-margin-bottom:26px;
-}
-
-.check-list{
+.panel-list{
+position:relative;
+z-index:2;
 display:grid;
-gap:14px;
+gap:15px;
 }
 
-.check-item{
+.panel-item{
+background:#f4fbff;
+border:1px solid #d8ebf4;
+border-radius:20px;
+padding:18px;
 display:flex;
-align-items:flex-start;
 gap:12px;
-font-size:16px;
-font-weight:700;
-color:#25495d;
+align-items:flex-start;
+font-weight:800;
+color:#24475c;
 }
 
 .check{
@@ -491,9 +286,138 @@ color:white;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:14px;
 font-weight:900;
 flex:none;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:36px;
+}
+
+.stat{
+background:white;
+border:1px solid rgba(7,107,158,.10);
+border-radius:24px;
+padding:20px;
+box-shadow:0 12px 30px rgba(0,60,100,.07);
+}
+
+.stat strong{
+display:block;
+font-size:24px;
+font-weight:900;
+color:#06334d;
+}
+
+.stat span{
+font-size:13px;
+font-weight:700;
+color:#637b89;
+}
+
+.section{
+padding:92px 0;
+}
+
+.white{
+background:white;
+}
+
+.dark{
+background:
+radial-gradient(circle at 85% 15%,rgba(33,199,232,.20),transparent 25%),
+linear-gradient(135deg,#042b40,#075a7d 55%,#05334d);
+color:white;
+}
+
+.section-head{
+text-align:center;
+max-width:820px;
+margin:0 auto 52px;
+}
+
+.eyebrow{
+font-size:13px;
+font-weight:900;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:#0780b9;
+margin-bottom:14px;
+}
+
+.dark .eyebrow{
+color:#2ed6ff;
+}
+
+.section-title{
+font-size:46px;
+line-height:1.12;
+letter-spacing:-1.5px;
+font-weight:900;
+color:#061f33;
+}
+
+.dark .section-title{
+color:white;
+}
+
+.section-text{
+font-size:18px;
+line-height:1.85;
+color:#607989;
+margin-top:18px;
+}
+
+.dark .section-text{
+color:#d5f3fb;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+}
+
+.card{
+background:white;
+border:1px solid rgba(7,107,158,.10);
+border-radius:30px;
+padding:30px;
+box-shadow:0 18px 45px rgba(0,60,100,.08);
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 25px 60px rgba(0,60,100,.12);
+}
+
+.icon{
+width:58px;
+height:58px;
+border-radius:20px;
+background:#e5f8ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+margin-bottom:20px;
+}
+
+.card h3{
+font-size:22px;
+font-weight:900;
+color:#061f33;
+margin-bottom:12px;
+}
+
+.card p{
+font-size:16px;
+line-height:1.75;
+color:#607989;
 }
 
 .steps{
@@ -503,17 +427,18 @@ gap:22px;
 }
 
 .step{
-background:rgba(255,255,255,.1);
+background:rgba(255,255,255,.10);
 border:1px solid rgba(255,255,255,.18);
 border-radius:30px;
 padding:30px;
 backdrop-filter:blur(10px);
 }
 
-.step-number{
+.step strong{
+display:block;
 font-size:34px;
 font-weight:900;
-color:#28d8ff;
+color:#2ed6ff;
 margin-bottom:18px;
 }
 
@@ -526,7 +451,7 @@ margin-bottom:12px;
 .step p{
 font-size:16px;
 line-height:1.75;
-color:#d3f1fa;
+color:#d5f3fb;
 }
 
 .areas{
@@ -536,14 +461,18 @@ gap:13px;
 justify-content:center;
 }
 
-.area-pill{
+.areas span{
 background:white;
-border:1px solid rgba(8,105,157,.08);
+border:1px solid rgba(7,107,158,.10);
 box-shadow:0 12px 28px rgba(0,60,100,.07);
 border-radius:999px;
 padding:14px 22px;
 font-weight:900;
-color:#073a58;
+color:#06334d;
+}
+
+.form-section{
+background:#f4fbff;
 }
 
 .form-wrap{
@@ -555,16 +484,12 @@ align-items:stretch;
 
 .form-info{
 background:
-linear-gradient(135deg,rgba(4,45,67,.94),rgba(7,95,130,.95)),
-url('servico-2.jpg') center/cover no-repeat;
+radial-gradient(circle at 20% 20%,rgba(37,211,102,.18),transparent 24%),
+linear-gradient(135deg,#042b40,#075a7d);
 border-radius:38px;
 padding:42px;
 color:white;
 box-shadow:0 25px 65px rgba(0,60,100,.15);
-}
-
-.form-info .eyebrow{
-color:#28d8ff;
 }
 
 .form-info h2{
@@ -577,7 +502,7 @@ margin-bottom:18px;
 .form-info p{
 font-size:17px;
 line-height:1.8;
-color:#d5f2fa;
+color:#d5f3fb;
 margin-bottom:24px;
 }
 
@@ -600,7 +525,7 @@ background:white;
 border-radius:38px;
 padding:38px;
 box-shadow:0 25px 65px rgba(0,60,100,.11);
-border:1px solid rgba(8,105,157,.08);
+border:1px solid rgba(7,107,158,.08);
 }
 
 .form-grid{
@@ -615,14 +540,14 @@ flex-direction:column;
 gap:8px;
 }
 
-.field-full{
+.full{
 grid-column:1/-1;
 }
 
 label{
 font-size:14px;
 font-weight:900;
-color:#073a58;
+color:#06334d;
 }
 
 input,
@@ -635,7 +560,7 @@ border-radius:18px;
 padding:16px;
 font-size:16px;
 outline:none;
-color:#082033;
+color:#061f33;
 }
 
 textarea{
@@ -646,8 +571,8 @@ resize:vertical;
 input:focus,
 select:focus,
 textarea:focus{
-border-color:#0b84bd;
-box-shadow:0 0 0 4px rgba(11,132,189,.12);
+border-color:#0780b9;
+box-shadow:0 0 0 4px rgba(7,128,185,.12);
 }
 
 .submit{
@@ -664,66 +589,34 @@ cursor:pointer;
 box-shadow:0 18px 40px rgba(37,211,102,.28);
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.gallery-item{
-border-radius:30px;
-overflow:hidden;
-box-shadow:0 18px 45px rgba(0,60,100,.08);
+.final{
 background:white;
 }
 
-.gallery-item img{
-width:100%;
-height:260px;
-object-fit:cover;
-}
-
-.gallery-item div{
-padding:20px;
-}
-
-.gallery-item h3{
-font-size:20px;
-font-weight:900;
-color:#082033;
-margin-bottom:8px;
-}
-
-.gallery-item p{
-font-size:15px;
-line-height:1.65;
-color:#607584;
-}
-
-.final-cta{
+.final-box{
 background:
 radial-gradient(circle at 15% 15%,rgba(37,211,102,.22),transparent 28%),
-linear-gradient(135deg,#042d43,#064d70);
+linear-gradient(135deg,#042b40,#064d70);
 border-radius:42px;
-padding:56px;
+padding:58px;
 color:white;
 text-align:center;
 box-shadow:0 28px 75px rgba(0,60,100,.18);
 }
 
-.final-cta h2{
+.final-box h2{
 font-size:44px;
 line-height:1.15;
 font-weight:900;
 margin-bottom:18px;
 }
 
-.final-cta p{
+.final-box p{
 font-size:18px;
 line-height:1.8;
 max-width:760px;
 margin:0 auto 30px;
-color:#d5f2fa;
+color:#d5f3fb;
 }
 
 .footer{
@@ -762,37 +655,18 @@ box-shadow:0 18px 45px rgba(0,0,0,.24);
 
 @media(max-width:980px){
 
-.hero-grid{
+.hero-grid,
+.form-wrap{
 grid-template-columns:1fr;
 }
 
-.hero-title{
+.hero h1{
 font-size:48px;
-}
-
-.visual-grid img:nth-child(1){
-height:320px;
-}
-
-.visual-grid img{
-height:160px;
 }
 
 .cards,
 .steps{
 grid-template-columns:1fr 1fr;
-}
-
-.premium-box{
-grid-template-columns:1fr;
-}
-
-.form-wrap{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:1fr;
 }
 
 }
@@ -807,39 +681,39 @@ width:min(100% - 34px,1180px);
 padding:14px 0;
 }
 
-.brand-logo{
-width:70px;
-height:52px;
+.brand img{
+width:68px;
+height:50px;
 }
 
-.brand-title{
-font-size:31px;
+.brand-name{
+font-size:30px;
 }
 
-.brand-subtitle{
-font-size:15px;
+.brand-sub{
+font-size:14px;
 }
 
-.lang-btn{
-width:58px;
-height:58px;
-font-size:21px;
+.lang button{
+width:54px;
+height:54px;
+font-size:19px;
 }
 
 .hero{
-padding:62px 0 72px;
+padding:68px 0 74px;
 }
 
-.hero-title{
+.hero h1{
 font-size:42px;
-letter-spacing:-1.4px;
+letter-spacing:-1.5px;
 }
 
-.hero-text{
+.hero p{
 font-size:18px;
 }
 
-.hero-buttons{
+.actions{
 display:grid;
 grid-template-columns:1fr;
 }
@@ -849,36 +723,21 @@ width:100%;
 padding:18px 20px;
 }
 
-.trust-row{
+.stats{
 grid-template-columns:1fr;
 }
 
-.visual-card{
+.panel{
+padding:30px;
 border-radius:32px;
-padding:10px;
 }
 
-.visual-grid{
-grid-template-columns:1fr 1fr;
-gap:7px;
-border-radius:25px;
-}
-
-.visual-grid img:nth-child(1){
-grid-row:auto;
-height:180px;
-}
-
-.visual-grid img{
-height:180px;
-}
-
-.visual-badge{
-display:none;
+.panel h2{
+font-size:30px;
 }
 
 .section{
-padding:72px 0;
+padding:74px 0;
 }
 
 .section-title{
@@ -890,40 +749,22 @@ font-size:35px;
 grid-template-columns:1fr;
 }
 
-.premium-content{
-padding:32px;
-}
-
-.premium-content h2{
-font-size:34px;
-}
-
-.premium-image{
-min-height:300px;
-}
-
-.form-card{
-padding:28px;
+.form-card,
+.form-info{
+padding:30px;
+border-radius:32px;
 }
 
 .form-grid{
 grid-template-columns:1fr;
 }
 
-.form-info{
-padding:32px;
-}
-
-.form-info h2{
-font-size:34px;
-}
-
-.final-cta{
+.final-box{
 padding:38px 24px;
 border-radius:32px;
 }
 
-.final-cta h2{
+.final-box h2{
 font-size:34px;
 }
 
@@ -943,16 +784,16 @@ padding:17px;
 <div class="container header-inner">
 
 <a class="brand" href="index.html">
-<img class="brand-logo" src="luxclean-logo.png" alt="LuxClean">
+<img src="luxclean-logo.png" alt="LuxClean">
 <div>
-<div class="brand-title">LuxClean</div>
-<div class="brand-subtitle">Limpeza Profissional</div>
+<div class="brand-name">LuxClean</div>
+<div class="brand-sub" data-pt="Limpeza Profissional" data-en="Professional Cleaning">Limpeza Profissional</div>
 </div>
 </a>
 
-<div class="header-actions">
-<div class="lang-btn lang-active">PT</div>
-<div class="lang-btn lang-outline">EN</div>
+<div class="lang">
+<button class="active" onclick="setLang('pt', this)">PT</button>
+<button onclick="setLang('en', this)">EN</button>
 </div>
 
 </div>
@@ -965,66 +806,60 @@ padding:17px;
 
 <div>
 
-<div class="kicker">
-<span class="kicker-dot"></span>
-<span>ALMADA • LIMPEZA PROFISSIONAL</span>
+<div class="badge">
+<span class="dot"></span>
+<span data-pt="ALMADA • LIMPEZA PROFISSIONAL" data-en="ALMADA • PROFESSIONAL CLEANING">ALMADA • LIMPEZA PROFISSIONAL</span>
 </div>
 
-<h1 class="hero-title">
+<h1 data-pt="Limpeza em Almada com padrão premium." data-en="Premium cleaning services in Almada.">
 Limpeza em <span>Almada</span> com padrão premium.
 </h1>
 
-<p class="hero-text">
+<p data-pt="A LuxClean realiza limpezas profissionais em Almada para casas, apartamentos, escritórios, condomínios, pós-obra e higienização de sofás. Um atendimento cuidado, elegante e pensado para quem valoriza detalhe, confiança e resultado." data-en="LuxClean provides professional cleaning services in Almada for homes, apartments, offices, condominiums, post-construction cleaning and upholstery cleaning. A refined service designed for clients who value detail, trust and results.">
 A LuxClean realiza limpezas profissionais em Almada para casas, apartamentos,
 escritórios, condomínios, pós-obra e higienização de sofás. Um atendimento
 cuidado, elegante e pensado para quem valoriza detalhe, confiança e resultado.
 </p>
 
-<div class="hero-buttons">
-
-<a class="btn btn-green" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Vim%20pela%20página%20de%20Almada%20e%20gostaria%20de%20pedir%20um%20orçamento.">
+<div class="actions">
+<a class="btn btn-green" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Vim%20pela%20página%20de%20Almada%20e%20gostaria%20de%20pedir%20um%20orçamento." data-pt="Pedir orçamento" data-en="Request a quote">
 Pedir orçamento
 </a>
 
-<a class="btn btn-light" href="#pedido">
+<a class="btn btn-dark" href="#pedido" data-pt="Preencher pedido" data-en="Fill request">
 Preencher pedido
 </a>
-
 </div>
 
-<div class="trust-row">
-
-<div class="trust-card">
+<div class="stats">
+<div class="stat">
 <strong>Almada</strong>
-<span>Atendimento local</span>
+<span data-pt="Atendimento local" data-en="Local service">Atendimento local</span>
 </div>
-
-<div class="trust-card">
-<strong>Rápido</strong>
-<span>Contacto por WhatsApp</span>
+<div class="stat">
+<strong data-pt="Rápido" data-en="Fast">Rápido</strong>
+<span data-pt="Contacto por WhatsApp" data-en="WhatsApp contact">Contacto por WhatsApp</span>
 </div>
-
-<div class="trust-card">
+<div class="stat">
 <strong>Premium</strong>
-<span>Cuidado nos detalhes</span>
+<span data-pt="Cuidado nos detalhes" data-en="Attention to detail">Cuidado nos detalhes</span>
+</div>
 </div>
 
 </div>
 
-</div>
+<div class="panel">
 
-<div class="visual-card">
+<h2 data-pt="Serviços com apresentação de empresa grande." data-en="Services with a premium company image.">
+Serviços com apresentação de empresa grande.
+</h2>
 
-<div class="visual-badge">
-<strong>LuxClean Almada</strong>
-<span>Limpeza organizada e profissional</span>
-</div>
-
-<div class="visual-grid">
-<img src="galeria-1.jpg" alt="Limpeza profissional LuxClean">
-<img src="hero.jpg" alt="Produtos de limpeza profissional">
-<img src="galeria-2.jpg" alt="Serviço de limpeza em Almada">
-<img src="galeria-3.jpg" alt="Equipa de limpeza">
+<div class="panel-list">
+<div class="panel-item"><span class="check">✓</span><span data-pt="Limpeza residencial em Almada" data-en="Residential cleaning in Almada">Limpeza residencial em Almada</span></div>
+<div class="panel-item"><span class="check">✓</span><span data-pt="Escritórios e espaços comerciais" data-en="Offices and commercial spaces">Escritórios e espaços comerciais</span></div>
+<div class="panel-item"><span class="check">✓</span><span data-pt="Condomínios e áreas comuns" data-en="Condominiums and common areas">Condomínios e áreas comuns</span></div>
+<div class="panel-item"><span class="check">✓</span><span data-pt="Pós-obra e limpeza profunda" data-en="Post-construction and deep cleaning">Pós-obra e limpeza profunda</span></div>
+<div class="panel-item"><span class="check">✓</span><span data-pt="Sofás, estofos e higienização" data-en="Sofas, upholstery and sanitizing">Sofás, estofos e higienização</span></div>
 </div>
 
 </div>
@@ -1032,92 +867,52 @@ Preencher pedido
 </div>
 </section>
 
-<section class="section section-white">
+<section class="section white">
 <div class="container">
 
 <div class="section-head">
-<div class="eyebrow">SERVIÇOS EM ALMADA</div>
-<h2 class="section-title">Soluções de limpeza para cada tipo de espaço</h2>
-<p class="section-text">
-Trabalhamos com limpezas pontuais, limpezas regulares e serviços específicos,
-sempre avaliando o tipo de espaço, a necessidade do cliente e o nível de detalhe.
+<div class="eyebrow" data-pt="SERVIÇOS EM ALMADA" data-en="SERVICES IN ALMADA">SERVIÇOS EM ALMADA</div>
+<h2 class="section-title" data-pt="Soluções de limpeza para cada tipo de espaço" data-en="Cleaning solutions for every type of space">
+Soluções de limpeza para cada tipo de espaço
+</h2>
+<p class="section-text" data-pt="Trabalhamos com limpezas pontuais, regulares e serviços específicos, sempre com atenção ao detalhe e à necessidade do cliente." data-en="We provide one-time, regular and specific cleaning services, always focused on detail and each client’s needs.">
+Trabalhamos com limpezas pontuais, regulares e serviços específicos,
+sempre com atenção ao detalhe e à necessidade do cliente.
 </p>
 </div>
 
 <div class="cards">
 
 <div class="card">
-<div class="card-icon">🏠</div>
-<h3>Limpeza residencial</h3>
-<p>Casas, apartamentos e alojamentos com limpeza cuidada, organizada e com atenção ao detalhe.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🏢</div>
-<h3>Escritórios</h3>
-<p>Ambientes profissionais mais limpos, agradáveis e preparados para equipas e clientes.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🧹</div>
-<h3>Pós-obra</h3>
-<p>Remoção de pó, resíduos e sujidade após obras, remodelações ou mudanças.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🛋️</div>
-<h3>Sofás e estofos</h3>
-<p>Limpeza e higienização de sofás, cadeiras, colchões e estofos com cuidado profissional.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<div class="premium-box">
-
-<div class="premium-image"></div>
-
-<div class="premium-content">
-
-<div class="eyebrow">PADRÃO LUXCLEAN</div>
-
-<h2>Uma limpeza com aparência, organização e confiança.</h2>
-
-<p>
-A página de Almada foi criada para apresentar um serviço mais elegante,
-direto e profissional. A ideia é passar segurança ao cliente antes mesmo
-dele falar no WhatsApp.
+<div class="icon">🏠</div>
+<h3 data-pt="Limpeza residencial" data-en="Residential cleaning">Limpeza residencial</h3>
+<p data-pt="Casas, apartamentos e alojamentos com limpeza cuidada, organizada e profissional." data-en="Homes, apartments and accommodations with careful, organized and professional cleaning.">
+Casas, apartamentos e alojamentos com limpeza cuidada, organizada e profissional.
 </p>
-
-<div class="check-list">
-
-<div class="check-item">
-<span class="check">✓</span>
-<span>Atendimento por WhatsApp com pedido organizado.</span>
 </div>
 
-<div class="check-item">
-<span class="check">✓</span>
-<span>Serviços para residências, escritórios, condomínios e pós-obra.</span>
+<div class="card">
+<div class="icon">🏢</div>
+<h3 data-pt="Escritórios" data-en="Offices">Escritórios</h3>
+<p data-pt="Ambientes profissionais mais limpos, agradáveis e preparados para equipas e clientes." data-en="Cleaner and more pleasant professional spaces for teams and clients.">
+Ambientes profissionais mais limpos, agradáveis e preparados para equipas e clientes.
+</p>
 </div>
 
-<div class="check-item">
-<span class="check">✓</span>
-<span>Possibilidade de enviar fotos e detalhes do espaço.</span>
+<div class="card">
+<div class="icon">🧹</div>
+<h3 data-pt="Pós-obra" data-en="Post-construction">Pós-obra</h3>
+<p data-pt="Remoção de pó, resíduos e sujidade após obras, remodelações ou mudanças." data-en="Removal of dust, debris and dirt after works, renovations or moving.">
+Remoção de pó, resíduos e sujidade após obras, remodelações ou mudanças.
+</p>
 </div>
 
-<div class="check-item">
-<span class="check">✓</span>
-<span>Apresentação mais premium para clientes de Almada e Margem Sul.</span>
-</div>
-
-</div>
-
+<div class="card">
+<div class="icon">🛋️</div>
+<h3 data-pt="Sofás e estofos" data-en="Sofas and upholstery">Sofás e estofos</h3>
+<p data-pt="Limpeza e higienização de sofás, cadeiras, colchões e estofos." data-en="Cleaning and sanitizing of sofas, chairs, mattresses and upholstery.">
+Limpeza e higienização de sofás, cadeiras, colchões e estofos.
+</p>
 </div>
 
 </div>
@@ -1125,42 +920,51 @@ dele falar no WhatsApp.
 </div>
 </section>
 
-<section class="section section-blue">
+<section class="section dark">
 <div class="container">
 
 <div class="section-head">
-<div class="eyebrow">SIMPLES E RÁPIDO</div>
-<h2 class="section-title">Como funciona o pedido</h2>
-<p class="section-text">
-O cliente envia as informações principais e a LuxClean consegue responder
-com mais organização, rapidez e profissionalismo.
+<div class="eyebrow" data-pt="COMO FUNCIONA" data-en="HOW IT WORKS">COMO FUNCIONA</div>
+<h2 class="section-title" data-pt="Pedido simples, atendimento organizado" data-en="Simple request, organized service">
+Pedido simples, atendimento organizado
+</h2>
+<p class="section-text" data-pt="O cliente envia as informações principais e a LuxClean responde com mais clareza e profissionalismo." data-en="The client sends the main information and LuxClean replies clearly and professionally.">
+O cliente envia as informações principais e a LuxClean responde com mais clareza e profissionalismo.
 </p>
 </div>
 
 <div class="steps">
 
 <div class="step">
-<div class="step-number">01</div>
-<h3>Envia o pedido</h3>
-<p>O cliente fala pelo WhatsApp ou preenche o formulário da página.</p>
+<strong>01</strong>
+<h3 data-pt="Envia o pedido" data-en="Send request">Envia o pedido</h3>
+<p data-pt="O cliente fala pelo WhatsApp ou preenche o formulário da página." data-en="The client contacts us by WhatsApp or fills in the page form.">
+O cliente fala pelo WhatsApp ou preenche o formulário da página.
+</p>
 </div>
 
 <div class="step">
-<div class="step-number">02</div>
-<h3>Indica o serviço</h3>
-<p>Casa, escritório, sofá, condomínio, pós-obra ou outro serviço.</p>
+<strong>02</strong>
+<h3 data-pt="Indica o serviço" data-en="Choose service">Indica o serviço</h3>
+<p data-pt="Casa, escritório, sofá, condomínio, pós-obra ou outro serviço." data-en="Home, office, sofa, condominium, post-construction or another service.">
+Casa, escritório, sofá, condomínio, pós-obra ou outro serviço.
+</p>
 </div>
 
 <div class="step">
-<div class="step-number">03</div>
-<h3>Passa a localidade</h3>
-<p>Almada, Cacilhas, Feijó, Laranjeiro, Sobreda ou arredores.</p>
+<strong>03</strong>
+<h3 data-pt="Passa a localidade" data-en="Send location">Passa a localidade</h3>
+<p data-pt="Almada, Cacilhas, Feijó, Laranjeiro, Sobreda ou arredores." data-en="Almada, Cacilhas, Feijó, Laranjeiro, Sobreda or nearby areas.">
+Almada, Cacilhas, Feijó, Laranjeiro, Sobreda ou arredores.
+</p>
 </div>
 
 <div class="step">
-<div class="step-number">04</div>
-<h3>Recebe orientação</h3>
-<p>Podemos pedir fotos, medidas ou detalhes para preparar melhor o orçamento.</p>
+<strong>04</strong>
+<h3 data-pt="Recebe orientação" data-en="Receive guidance">Recebe orientação</h3>
+<p data-pt="Podemos pedir fotos, medidas ou detalhes para preparar melhor o orçamento." data-en="We may ask for photos, measurements or details to prepare the quote better.">
+Podemos pedir fotos, medidas ou detalhes para preparar melhor o orçamento.
+</p>
 </div>
 
 </div>
@@ -1168,226 +972,41 @@ com mais organização, rapidez e profissionalismo.
 </div>
 </section>
 
-<section class="section section-white">
+<section class="section white">
 <div class="container">
 
 <div class="section-head">
-<div class="eyebrow">ÁREAS DE ATENDIMENTO</div>
-<h2 class="section-title">Almada e arredores</h2>
-<p class="section-text">
+<div class="eyebrow" data-pt="ÁREAS DE ATENDIMENTO" data-en="SERVICE AREAS">ÁREAS DE ATENDIMENTO</div>
+<h2 class="section-title" data-pt="Almada e arredores" data-en="Almada and nearby areas">Almada e arredores</h2>
+<p class="section-text" data-pt="Atendimento conforme disponibilidade, tipo de serviço e localização." data-en="Service depending on availability, type of service and location.">
 Atendimento conforme disponibilidade, tipo de serviço e localização.
 </p>
 </div>
 
 <div class="areas">
-
-<span class="area-pill">Almada</span>
-<span class="area-pill">Cacilhas</span>
-<span class="area-pill">Feijó</span>
-<span class="area-pill">Laranjeiro</span>
-<span class="area-pill">Sobreda</span>
-<span class="area-pill">Charneca da Caparica</span>
-<span class="area-pill">Costa da Caparica</span>
-<span class="area-pill">Pragal</span>
-<span class="area-pill">Caparica</span>
-<span class="area-pill">Margem Sul</span>
-
+<span>Almada</span>
+<span>Cacilhas</span>
+<span>Feijó</span>
+<span>Laranjeiro</span>
+<span>Sobreda</span>
+<span>Charneca da Caparica</span>
+<span>Costa da Caparica</span>
+<span>Pragal</span>
+<span>Caparica</span>
+<span>Margem Sul</span>
 </div>
 
 </div>
 </section>
 
-<section class="section" id="pedido">
+<section class="section form-section" id="pedido">
 <div class="container">
 
 <div class="form-wrap">
 
 <div class="form-info">
-
-<div class="eyebrow">PEDIDO DE ORÇAMENTO</div>
-
-<h2>Preencha os dados e envie direto para o WhatsApp.</h2>
-
-<p>
-Ao clicar no botão, o WhatsApp abre com a mensagem já organizada:
-nome, telefone, localidade, serviço e detalhes do pedido.
-</p>
-
-<div class="form-mini">
-<div>✓ Atendimento em Almada</div>
-<div>✓ Orçamento mais organizado</div>
-<div>✓ Resposta mais rápida</div>
-</div>
-
-</div>
-
-<form class="form-card" onsubmit="sendWhatsApp(event)">
-
-<div class="form-grid">
-
-<div class="field">
-<label>Nome</label>
-<input id="nome" type="text" placeholder="O seu nome">
-</div>
-
-<div class="field">
-<label>Telefone</label>
-<input id="telefone" type="text" placeholder="+351 ...">
-</div>
-
-<div class="field">
-<label>Localidade</label>
-<input id="localidade" type="text" placeholder="Ex: Almada, Cacilhas, Feijó...">
-</div>
-
-<div class="field">
-<label>Serviço</label>
-<select id="servico">
-<option value="">Escolha uma opção</option>
-<option>Limpeza residencial</option>
-<option>Limpeza de escritório</option>
-<option>Limpeza de condomínio</option>
-<option>Limpeza pós-obra</option>
-<option>Limpeza e higienização de sofá</option>
-<option>Outro serviço</option>
-</select>
-</div>
-
-<div class="field field-full">
-<label>Quando precisa?</label>
-<input id="data" type="text" placeholder="Ex: esta semana, sábado, urgente...">
-</div>
-
-<div class="field field-full">
-<label>Mensagem</label>
-<textarea id="mensagem" placeholder="Descreva o espaço, quantidade de divisões, sofá, escritório, pós-obra, etc."></textarea>
-</div>
-
-</div>
-
-<button class="submit" type="submit">
-Enviar pedido pelo WhatsApp
-</button>
-
-</form>
-
-</div>
-
-</div>
-</section>
-
-<section class="section section-white">
-<div class="container">
-
-<div class="section-head">
-<div class="eyebrow">APRESENTAÇÃO</div>
-<h2 class="section-title">Imagem profissional para conquistar confiança</h2>
-<p class="section-text">
-A LuxClean apresenta um serviço com visual limpo, moderno e adequado para clientes
-que procuram qualidade e seriedade.
-</p>
-</div>
-
-<div class="gallery">
-
-<div class="gallery-item">
-<img src="hero.jpg" alt="Produtos de limpeza">
-<div>
-<h3>Produtos e cuidado</h3>
-<p>Organização, atenção e materiais adequados para cada tipo de serviço.</p>
-</div>
-</div>
-
-<div class="gallery-item">
-<img src="galeria-2.jpg" alt="Limpeza profissional">
-<div>
-<h3>Limpeza detalhada</h3>
-<p>Serviços pensados para casas, escritórios e espaços profissionais.</p>
-</div>
-</div>
-
-<div class="gallery-item">
-<img src="galeria-3.jpg" alt="Equipa LuxClean">
-<div>
-<h3>Resultado visível</h3>
-<p>Mais higiene, melhor apresentação e ambiente mais agradável.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<div class="final-cta">
-
-<h2>Precisa de limpeza em Almada?</h2>
-
-<p>
-Fale com a LuxClean pelo WhatsApp. Envie o serviço, a localidade, quando precisa
-e algumas fotos se tiver. Respondemos da forma mais organizada possível.
-</p>
-
-<a class="btn btn-green" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Estou%20em%20Almada%20e%20gostaria%20de%20um%20orçamento.%0A%0AServiço:%0ALocalidade:%0AQuando%20precisa:%0ADetalhes:">
-Falar no WhatsApp
-</a>
-
-</div>
-
-</div>
-</section>
-
-</main>
-
-<footer class="footer">
-<h2>LuxClean Limpeza Profissional</h2>
-<p>Almada • Lisboa • Margem Sul • Cascais</p>
-<p>© 2026 LuxClean. Todos os direitos reservados.</p>
-</footer>
-
-<a class="fixed-whatsapp" target="_blank" href="https://wa.me/351924133226?text=Olá%20LuxClean.%20Vim%20pela%20página%20de%20Almada%20e%20gostaria%20de%20um%20orçamento.">
-WhatsApp
-</a>
-
-<script>
-
-function sendWhatsApp(event){
-
-event.preventDefault();
-
-const nome = document.getElementById('nome').value.trim();
-
-const telefone = document.getElementById('telefone').value.trim();
-
-const localidade = document.getElementById('localidade').value.trim();
-
-const servico = document.getElementById('servico').value.trim();
-
-const data = document.getElementById('data').value.trim();
-
-const mensagem = document.getElementById('mensagem').value.trim();
-
-const texto = 
-`Olá, vim pela página de Almada da LuxClean. Gostaria de pedir um orçamento.
-
-Nome: ${nome}
-Telefone: ${telefone}
-Localidade: ${localidade}
-Serviço: ${servico}
-Quando precisa: ${data}
-Mensagem: ${mensagem}`;
-
-const url = 'https://wa.me/351924133226?text=' + encodeURIComponent(texto);
-
-window.open(url,'_blank');
-
-}
-
-</script>
-
-</body>
-
-</html>
+<div class="eyebrow" data-pt="PEDIDO DE ORÇAMENTO" data-en="QUOTE REQUEST">PEDIDO DE ORÇAMENTO</div>
+<h2 data-pt="Preencha os dados e envie direto para o WhatsApp." data-en="Fill in your details and send directly to WhatsApp.">
+Preencha os dados e envie direto para o WhatsApp.
+</h2>
+<p data-pt="Ao clicar no botão, o WhatsApp abre com a mensagem organizada: nome, telefone, localidade, ser
